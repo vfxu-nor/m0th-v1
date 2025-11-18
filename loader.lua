@@ -1,4 +1,4 @@
-local repo = "https://raw.githubusercontent.com/vfxu-nor/m0th-v1/main/"
+local repo = "https://github.com/vfxu-nor/m0th-v1/edit/main/"
 
 loadstring(game:HttpGet(repo.."ui.lua"))()  
 task.wait(0.2)
