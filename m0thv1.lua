@@ -952,24 +952,439 @@ Icon_5.Image = "rbxassetid://5743022869"
 Icon_5.ImageColor3 = Color3.fromRGB(175, 175, 175)
 Icon_5.ImageTransparency = 1.000
 
-task.spawn(function()
-    local InsertService = game:GetService("InsertService")
-    local player = game.Players.LocalPlayer
-    local m0thGui = player:WaitForChild("PlayerGui"):WaitForChild("m0th") -- your UI name
+local MainScript = Instance.new("LocalScript")
+MainScript.Name = "Main"
+MainScript.Parent = m0th
 
-    local success, asset = pcall(InsertService.LoadAsset, InsertService, 116887267267983)
-    if not success then
-        warn("Failed to load model 116887267267983 – is it PUBLIC?")
-        return
-    end
+MainScript.Source = [[
+script.Parent.Frame.Active = true
+script.Parent.Frame.Draggable = true
 
-    -- Move every child (Box, Lines, box, line, aim scripts) directly into m0th
-    for _, obj in asset:GetChildren() do
-        if obj:IsA("BoolValue") or obj:IsA("LocalScript") then
-            obj.Parent = m0thGui
-        end
-    end
+local TweenService = game:GetService("TweenService")
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
 
-    asset:Destroy() -- clean up the empty container
-    print("Scripts & Bools imported into m0th!")
+local player = Players.LocalPlayer
+local userId = player.UserId
+local username = player.Name
+
+local playerGui = player:WaitForChild("PlayerGui")
+
+local UI = script.Parent
+local Elements = UI.Frame.Elements.list
+
+local Aim_toggle  = Elements["Aim-toggle"]
+local Box_toggle  = Elements["box-toggle"]
+local Lines_toggle = Elements["lines-toggle"]
+local Speed_toggle = Elements["Speed-toggle"]
+
+local Speed_box = Elements.Input.InputFrame.InputBox
+
+local PlayerButton = Elements.PlayerButton
+local PFP = PlayerButton.PFP
+local NameLabel = PlayerButton.Title
+local FPSLabel = PlayerButton.Fps
+local PlayersLabel = PlayerButton.Players
+local RegionLabel = PlayerButton.Server
+local PingLabel = PlayerButton.Ping
+
+local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+
+PingLabel.Text = "Ping: " .. math.floor(player:GetNetworkPing() * 1000) .. "ms"
+RegionLabel.Text = "Server: " .. tostring(game.PlaceId)
+
+local content, ready = Players:GetUserThumbnailAsync(
+	userId,
+	Enum.ThumbnailType.HeadShot,
+	Enum.ThumbnailSize.Size420x420
+)
+
+if ready then
+	PFP.Image = content
+	NameLabel.Text = username
+else
+	PFP.Image = "rbxasset://textures/face.png"
+	NameLabel.Text = "Loading..."
+end
+
+local lastFrame = tick()
+local fps = 0
+
+RunService.RenderStepped:Connect(function()
+	local now = tick()
+	fps = 1 / (now - lastFrame)
+	lastFrame = now
 end)
+
+task.spawn(function()
+	while true do
+		FPSLabel.Text = "FPS: " .. math.floor(fps)
+		PlayersLabel.Text = "Players: " .. #Players:GetPlayers()
+		task.wait(1)
+	end
+end)
+
+local function setupToggle(toggleUI, valueObjectOrBool, callback)
+	local Switch = toggleUI.Switch
+	local Indicator = Switch.Indicator
+	local Interact = toggleUI.Interact
+
+	local useValueObject = typeof(valueObjectOrBool) == "Instance"
+	local state = useValueObject and valueObjectOrBool.Value or valueObjectOrBool
+
+	-- force scripts to match existing values on startup
+	if callback then
+		callback(state)
+	end
+
+	local function updateVisual()
+		local newPos = state and UDim2.new(1, -20, 0.5, 0) or UDim2.new(1, -40, 0.5, 0)
+		local newColor = state and Color3.fromRGB(0,255,100) or Color3.fromRGB(30,30,30)
+
+		TweenService:Create(Indicator, tweenInfo, {Position = newPos}):Play()
+		TweenService:Create(Switch, tweenInfo, {BackgroundColor3 = newColor}):Play()
+	end
+
+	Interact.Activated:Connect(function()
+		state = not state
+
+		if useValueObject then
+			valueObjectOrBool.Value = state
+		end
+
+		updateVisual()
+
+		if callback then callback(state) end
+	end)
+
+	updateVisual()
+end
+
+
+setupToggle(Aim_toggle, false, function(state)
+	UI.aim.Disabled = not state
+end)
+
+setupToggle(Box_toggle, UI.Box, function(state)
+end)
+
+setupToggle(Lines_toggle, UI.Lines, function(state)
+end)
+
+-- Speed Toggle
+local speedToggleOn = false
+setupToggle(Speed_toggle, speedToggleOn, function(state)
+	speedToggleOn = state
+end)
+
+--=====================================================
+-- SPEED INPUT + TOGGLE LOGIC
+--=====================================================
+Speed_box.FocusLost:Connect(function()
+	if not speedToggleOn then return end  -- ignore if toggle is off
+
+	local char = player.Character or player.CharacterAdded:Wait()
+	local humanoid = char:WaitForChild("Humanoid")
+
+	local speed = tonumber(Speed_box.Text)
+	if speed then
+		humanoid.WalkSpeed = speed
+	end
+end)
+]]
+
+local box = Instance.new("LocalScript")
+box.Name = "box"
+box.Parent = m0th
+
+box.Source = [[
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local Box = script.Parent.Box
+
+local ESP_Table = {} 
+
+local function AddESP(Character)
+	if not Character or Character == LocalPlayer.Character then return end
+	if ESP_Table[Character] then return end 
+
+	local highlight = Instance.new("Highlight")
+	highlight.Parent = Character
+	highlight.FillColor = Color3.fromRGB(255, 143, 143)   
+	highlight.OutlineColor = Color3.fromRGB(255, 255, 255)
+	highlight.FillTransparency = 0.5
+	highlight.OutlineTransparency = 0
+	highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+
+	ESP_Table[Character] = highlight
+end
+
+local function RemoveESP(Character)
+	if ESP_Table[Character] then
+		ESP_Table[Character]:Destroy()
+		ESP_Table[Character] = nil
+	end
+end
+
+local function RemoveAllESP()
+	for character, highlight in pairs(ESP_Table) do
+		if highlight then highlight:Destroy() end
+	end
+	table.clear(ESP_Table)
+end
+
+local function OnCharacterAdded(Character)
+	if Box.Value then
+		AddESP(Character)
+	end
+
+	local humanoid = Character:WaitForChild("Humanoid")
+	humanoid.Died:Connect(function()
+		RemoveESP(Character)
+	end)
+end
+
+local function OnPlayerAdded(Player)
+	if Player == LocalPlayer then return end
+
+	if Player.Character then
+		OnCharacterAdded(Player.Character)
+	end
+
+	Player.CharacterAdded:Connect(OnCharacterAdded)
+end
+
+for _, plr in pairs(Players:GetPlayers()) do
+	OnPlayerAdded(plr)
+end
+
+Players.PlayerAdded:Connect(OnPlayerAdded)
+
+Players.PlayerRemoving:Connect(function(plr)
+	if plr.Character then
+		RemoveESP(plr.Character)
+	end
+end)
+
+Box:GetPropertyChangedSignal("Value"):Connect(function()
+	if Bo.Value == true then
+		for _, player in ipairs(game:GetService("Players"):GetPlayers()) do
+			if player ~= LocalPlayer and player.Character then
+				AddESP(player.Character)
+			end
+		end
+	else
+		RemoveAllESP()
+	end
+end)
+]]
+
+local line = Instance.new("LocalScript")
+line.Name = "line"
+line.Parent = m0th
+
+line.Source = [[
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local LocalPlayer = Players.LocalPlayer
+local Camera = workspace.CurrentCamera
+
+local SnaplineEnabled = script.Parent.Lines
+
+local TargetPartName = "HumanoidRootPart"
+local LineColor = Color3.new(1, 1, 1)
+local TeammateLineColor = Color3.new(0, 0.25, 1)
+local GenericHumanoidLineColor = Color3.new(1, 0, 0)
+local LineWidth = 2
+local DrawTeammates = true
+local FindHumanoids = true
+
+local Gui
+local Lines = {}
+local LineOrigin
+
+local function SetupGUI()
+	Gui = Instance.new("ScreenGui")
+	Gui.Name = "SnaplineGui"
+	Gui.ResetOnSpawn = false
+	Gui.Parent = LocalPlayer:WaitForChild("PlayerGui")
+end
+
+local function GetLineOrigin()
+	return Vector2.new(Camera.ViewportSize.X/2, Camera.ViewportSize.Y * 0.9)
+end
+
+local function SetLine(Line, Width, Color, Origin, Destination)
+	local Position = (Origin + Destination) / 2
+	Line.Position = UDim2.new(0, Position.X, 0, Position.Y)
+	local Length = (Origin - Destination).Magnitude
+	Line.BackgroundColor3 = Color
+	Line.BorderColor3 = Color
+	Line.Size = UDim2.new(0, Length, 0, Width)
+	Line.Rotation = math.deg(math.atan2(Destination.Y - Origin.Y, Destination.X - Origin.X))
+end
+
+local function RemoveAllLines()
+	for _, line in pairs(Lines) do
+		if line then line:Destroy() end
+	end
+	Lines = {}
+end
+
+local function UpdateSnaplines()
+	if not SnaplineEnabled.Value then
+		RemoveAllLines()
+		return
+	end
+
+	LineOrigin = GetLineOrigin()
+	local Targets = {}
+
+	for _, Player in pairs(Players:GetPlayers()) do
+		if Player == LocalPlayer then continue end
+		local IsTeammate = LocalPlayer.Team and Player.Team == LocalPlayer.Team
+		if not DrawTeammates and IsTeammate then continue end
+
+		local Character = Player.Character
+		if not Character then continue end
+		local TargetPart = Character:FindFirstChild(TargetPartName)
+		if not TargetPart then continue end
+
+		local ScreenPoint, OnScreen = Camera:WorldToScreenPoint(TargetPart.Position)
+		if OnScreen then
+			table.insert(Targets, {Vector2.new(ScreenPoint.X, ScreenPoint.Y), IsTeammate and TeammateLineColor or LineColor})
+		end
+	end
+
+	if FindHumanoids then
+		for _, Obj in pairs(workspace:GetDescendants()) do
+			if Obj:IsA("Humanoid") and not Players:FindFirstChild(Obj.Parent.Name) then
+				local TargetPart = Obj.Parent:FindFirstChild(TargetPartName)
+				if TargetPart then
+					local ScreenPoint, OnScreen = Camera:WorldToScreenPoint(TargetPart.Position)
+					if OnScreen then
+						table.insert(Targets, {Vector2.new(ScreenPoint.X, ScreenPoint.Y), GenericHumanoidLineColor})
+					end
+				end
+			end
+		end
+	end
+
+	while #Lines < #Targets do
+		local NewLine = Instance.new("Frame")
+		NewLine.Name = "Snapline"
+		NewLine.AnchorPoint = Vector2.new(0.5, 0.5)
+		NewLine.BorderSizePixel = 0
+		NewLine.BackgroundTransparency = 0
+		NewLine.Parent = Gui
+		table.insert(Lines, NewLine)
+	end
+
+	for i, Line in ipairs(Lines) do
+		local TargetData = Targets[i]
+		if TargetData then
+			SetLine(Line, LineWidth, TargetData[2], LineOrigin, TargetData[1])
+			Line.Visible = true
+		else
+			Line.Visible = false
+			if i > #Targets then
+				Line:Destroy()
+				table.remove(Lines, i)
+			end
+		end
+	end
+end
+
+SetupGUI()
+LineOrigin = GetLineOrigin()
+
+Camera:GetPropertyChangedSignal("ViewportSize"):Connect(function()
+	LineOrigin = GetLineOrigin()
+end)
+
+-- Run every frame
+RunService.RenderStepped:Connect(UpdateSnaplines)
+
+-- Optional: listen to BoolValue changes to clear immediately when toggled off
+SnaplineEnabled:GetPropertyChangedSignal("Value"):Connect(function()
+	if not SnaplineEnabled.Value then
+		RemoveAllLines()
+	end
+end)
+
+]]
+
+local aim = Instance.new("LocalScript")
+aim.Name = "Main"
+aim.Parent = m0th
+
+aim.Source = [[
+-- FOV Aimbot (AUTO-STARTS ON SCRIPT LOAD - No Keybind Needed!)
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+local Camera = workspace.CurrentCamera
+local LocalPlayer = Players.LocalPlayer
+
+local Enabled = true  -- AUTO-ENABLED
+local Connection = nil
+local ESP_Enabled = {}
+local FOV_ANGLE = math.rad(20)
+local SMOOTHING = 0.2
+
+local function GetClosestTarget()
+	local closest, minDist = nil, math.huge
+	local origin = Camera.CFrame.Position
+	local direction = Camera.CFrame.LookVector
+
+	for _, player in pairs(Players:GetPlayers()) do
+		if player == LocalPlayer then continue end
+		local char = player.Character
+		if not char then continue end
+		local hrp = char:FindFirstChild("HumanoidRootPart")
+		local hum = char:FindFirstChild("Humanoid")
+		if not hrp or not hum or hum.Health <= 0 then continue end
+
+		local targetPos = hrp.Position
+		local toTarget = (targetPos - origin)
+		local angle = math.acos(direction:Dot(toTarget.Unit))
+
+		if angle < FOV_ANGLE then
+			local dist = toTarget.Magnitude
+			if dist < minDist then
+				minDist = dist
+				closest = hrp
+			end
+		end
+	end
+
+	return closest
+end
+
+local function AimAtTarget(target)
+	local predictedPos = target.Position + (target.AssemblyLinearVelocity * 0.13)
+	local lookVector = (predictedPos - Camera.CFrame.Position).Unit
+	local targetCFrame = CFrame.lookAt(Camera.CFrame.Position, Camera.CFrame.Position + lookVector)
+	Camera.CFrame = Camera.CFrame:Lerp(targetCFrame, SMOOTHING)
+end
+
+local function UpdateAimbot()
+	local target = GetClosestTarget()
+	if target then
+		AimAtTarget(target)
+	end
+end
+
+Connection = RunService.RenderStepped:Connect(UpdateAimbot)
+
+]]
+aim.enabled = false
+
+local Box = Instance.new('BoolValue')
+Box.Parent = m0th
+Box.Name = "Box"
+
+local Lines = Instance.new('BoolValue')
+Lines.Parent = m0th
+Lines.Name = "Lines"
+
