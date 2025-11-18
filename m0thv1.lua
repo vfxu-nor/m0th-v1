@@ -1,406 +1,1845 @@
--- Generated using RoadToGlory's Converter v1.1 (RoadToGlory#9879) - FIXED VERSION
+--Thanks for using the plugin! - By AleXsjsju
 
+local StarterGui = game:GetService("StarterGui")
 -- Instances:
-local Converted = {
-	["_m0th"] = Instance.new("ScreenGui");
-	["_Frame"] = Instance.new("Frame");
-	["_Frame1"] = Instance.new("Frame");
-	["_UICorner"] = Instance.new("UICorner");
-	["_Frame2"] = Instance.new("Frame");
-	["_Frame3"] = Instance.new("Frame");
-	["_UICorner1"] = Instance.new("UICorner");
-	["_Shadow"] = Instance.new("Frame");
-	["_Image"] = Instance.new("ImageLabel");
-	["_Elements"] = Instance.new("Frame");
-	["_list"] = Instance.new("ScrollingFrame");
-	["_UIListLayout"] = Instance.new("UIListLayout");
-	["_PlayerButton"] = Instance.new("Frame");
-	["_UICorner2"] = Instance.new("UICorner");
-	["_Title"] = Instance.new("TextLabel");
-	["_UIStroke"] = Instance.new("UIStroke");
-	["_PFP"] = Instance.new("ImageLabel");
-	["_UICorner3"] = Instance.new("UICorner");
-	["_UIStroke1"] = Instance.new("UIStroke");
-	["_Players"] = Instance.new("TextLabel");
-	["_Server"] = Instance.new("TextLabel");
-	["_Fps"] = Instance.new("TextLabel");
-	["_Ping"] = Instance.new("TextLabel");
-	["_Aim-toggle"] = Instance.new("Frame");
-	["_UIStroke2"] = Instance.new("UIStroke");
-	["_UICorner4"] = Instance.new("UICorner");
-	["_Lock"] = Instance.new("Frame");
-	["_UIGradient"] = Instance.new("UIGradient");
-	["_UICorner5"] = Instance.new("UICorner");
-	["_Reason"] = Instance.new("TextLabel");
-	["_Icon"] = Instance.new("ImageLabel");
-	["_Switch"] = Instance.new("Frame");
-	["_UICorner6"] = Instance.new("UICorner");
-	["_UIStroke3"] = Instance.new("UIStroke");
-	["_Shadow1"] = Instance.new("ImageLabel");
-	["_UICorner7"] = Instance.new("UICorner");
-	["_Indicator"] = Instance.new("Frame");
-	["_UICorner8"] = Instance.new("UICorner");
-	["_UIStroke4"] = Instance.new("UIStroke");
-	["_Interact"] = Instance.new("TextButton");
-	["_Title1"] = Instance.new("TextLabel");
-	["_Placeholder"] = Instance.new("Frame");
-	["_Placeholder1"] = Instance.new("Frame");
-	["_box-toggle"] = Instance.new("Frame");
-	["_UIStroke5"] = Instance.new("UIStroke");
-	["_UICorner9"] = Instance.new("UICorner");
-	["_Lock1"] = Instance.new("Frame");
-	["_UIGradient1"] = Instance.new("UIGradient");
-	["_UICorner10"] = Instance.new("UICorner");
-	["_Reason1"] = Instance.new("TextLabel");
-	["_Icon1"] = Instance.new("ImageLabel");
-	["_Switch1"] = Instance.new("Frame");
-	["_UICorner11"] = Instance.new("UICorner");
-	["_UIStroke6"] = Instance.new("UIStroke");
-	["_Shadow2"] = Instance.new("ImageLabel");
-	["_UICorner12"] = Instance.new("UICorner");
-	["_Indicator1"] = Instance.new("Frame");
-	["_UICorner13"] = Instance.new("UICorner");
-	["_UIStroke7"] = Instance.new("UIStroke");
-	["_Interact1"] = Instance.new("TextButton");
-	["_Title2"] = Instance.new("TextLabel");
-	["_lines-toggle"] = Instance.new("Frame");
-	["_UIStroke8"] = Instance.new("UIStroke");
-	["_UICorner14"] = Instance.new("UICorner");
-	["_Lock2"] = Instance.new("Frame");
-	["_UIGradient2"] = Instance.new("UIGradient");
-	["_UICorner15"] = Instance.new("UICorner");
-	["_Reason2"] = Instance.new("TextLabel");
-	["_Icon2"] = Instance.new("ImageLabel");
-	["_Switch2"] = Instance.new("Frame");
-	["_UICorner16"] = Instance.new("UICorner");
-	["_UIStroke9"] = Instance.new("UIStroke");
-	["_Shadow3"] = Instance.new("ImageLabel");
-	["_UICorner17"] = Instance.new("UICorner");
-	["_Indicator2"] = Instance.new("Frame");
-	["_UICorner18"] = Instance.new("UICorner");
-	["_UIStroke10"] = Instance.new("UIStroke");
-	["_Interact2"] = Instance.new("TextButton");
-	["_Title3"] = Instance.new("TextLabel");
-	["_Speed-toggle"] = Instance.new("Frame");
-	["_UIStroke11"] = Instance.new("UIStroke");
-	["_UICorner19"] = Instance.new("UICorner");
-	["_Lock3"] = Instance.new("Frame");
-	["_UIGradient3"] = Instance.new("UIGradient");
-	["_UICorner20"] = Instance.new("UICorner");
-	["_Reason3"] = Instance.new("TextLabel");
-	["_Icon3"] = Instance.new("ImageLabel");
-	["_Switch3"] = Instance.new("Frame");
-	["_UICorner21"] = Instance.new("UICorner");
-	["_UIStroke12"] = Instance.new("UIStroke");
-	["_Shadow4"] = Instance.new("ImageLabel");
-	["_UICorner22"] = Instance.new("UICorner");
-	["_Indicator3"] = Instance.new("Frame");
-	["_UICorner23"] = Instance.new("UICorner");
-	["_UIStroke13"] = Instance.new("UIStroke");
-	["_Interact3"] = Instance.new("TextButton");
-	["_Title4"] = Instance.new("TextLabel");
-	["_Input"] = Instance.new("Frame");
-	["_UICorner24"] = Instance.new("UICorner");
-	["_Title5"] = Instance.new("TextLabel");
-	["_UIStroke14"] = Instance.new("UIStroke");
-	["_InputFrame"] = Instance.new("Frame");
-	["_InputBox"] = Instance.new("TextBox");
-	["_UIStroke15"] = Instance.new("UIStroke");
-	["_UICorner25"] = Instance.new("UICorner");
-	["_Lock4"] = Instance.new("Frame");
-	["_UIGradient4"] = Instance.new("UIGradient");
-	["_UICorner26"] = Instance.new("UICorner");
-	["_Reason4"] = Instance.new("TextLabel");
-	["_Icon4"] = Instance.new("ImageLabel");
-	["_box"] = Instance.new("LocalScript");
-	["_line"] = Instance.new("LocalScript");
-	["_aim"] = Instance.new("LocalScript");
-	["_Main"] = Instance.new("LocalScript");
-	["_Lines"] = Instance.new("BoolValue");
-	["_Box"] = Instance.new("BoolValue");
-}
 
--- Properties: (same as your original, skipping for brevity - copy from your file)
+local m0th = Instance.new('ScreenGui')
+local Frame = Instance.new('Frame')
+local Frame_1 = Instance.new('Frame')
+local UICorner = Instance.new('UICorner')
+local Frame_2 = Instance.new('Frame')
+local Frame_3 = Instance.new('Frame')
+local UICorner_1 = Instance.new('UICorner')
+local Shadow = Instance.new('Frame')
+local Image = Instance.new('ImageLabel')
+local Elements = Instance.new('Frame')
+local list = Instance.new('ScrollingFrame')
+local UIListLayout = Instance.new('UIListLayout')
+local PlayerButton = Instance.new('Frame')
+local UICorner_2 = Instance.new('UICorner')
+local Title = Instance.new('TextLabel')
+local UIStroke = Instance.new('UIStroke')
+local PFP = Instance.new('ImageLabel')
+local UICorner_3 = Instance.new('UICorner')
+local UIStroke_1 = Instance.new('UIStroke')
+local Players = Instance.new('TextLabel')
+local Server = Instance.new('TextLabel')
+local Fps = Instance.new('TextLabel')
+local Ping = Instance.new('TextLabel')
+local Aimtoggle = Instance.new('Frame')
+local UIStroke_2 = Instance.new('UIStroke')
+local UICorner_4 = Instance.new('UICorner')
+local Lock = Instance.new('Frame')
+local UIGradient = Instance.new('UIGradient')
+local UICorner_5 = Instance.new('UICorner')
+local Reason = Instance.new('TextLabel')
+local Icon = Instance.new('ImageLabel')
+local Switch = Instance.new('Frame')
+local UICorner_6 = Instance.new('UICorner')
+local UIStroke_3 = Instance.new('UIStroke')
+local Shadow_1 = Instance.new('ImageLabel')
+local UICorner_7 = Instance.new('UICorner')
+local Indicator = Instance.new('Frame')
+local UICorner_8 = Instance.new('UICorner')
+local UIStroke_4 = Instance.new('UIStroke')
+local Interact = Instance.new('TextButton')
+local Title_1 = Instance.new('TextLabel')
+local Placeholder = Instance.new('Frame')
+local Placeholder_1 = Instance.new('Frame')
+local boxtoggle = Instance.new('Frame')
+local UIStroke_5 = Instance.new('UIStroke')
+local UICorner_9 = Instance.new('UICorner')
+local Lock_1 = Instance.new('Frame')
+local UIGradient_1 = Instance.new('UIGradient')
+local UICorner_10 = Instance.new('UICorner')
+local Reason_1 = Instance.new('TextLabel')
+local Icon_1 = Instance.new('ImageLabel')
+local Switch_1 = Instance.new('Frame')
+local UICorner_11 = Instance.new('UICorner')
+local UIStroke_6 = Instance.new('UIStroke')
+local Shadow_2 = Instance.new('ImageLabel')
+local UICorner_12 = Instance.new('UICorner')
+local Indicator_1 = Instance.new('Frame')
+local UICorner_13 = Instance.new('UICorner')
+local UIStroke_7 = Instance.new('UIStroke')
+local Interact_1 = Instance.new('TextButton')
+local Title_2 = Instance.new('TextLabel')
+local linestoggle = Instance.new('Frame')
+local UIStroke_8 = Instance.new('UIStroke')
+local UICorner_14 = Instance.new('UICorner')
+local Lock_2 = Instance.new('Frame')
+local UIGradient_2 = Instance.new('UIGradient')
+local UICorner_15 = Instance.new('UICorner')
+local Reason_2 = Instance.new('TextLabel')
+local Icon_2 = Instance.new('ImageLabel')
+local Switch_2 = Instance.new('Frame')
+local UICorner_16 = Instance.new('UICorner')
+local UIStroke_9 = Instance.new('UIStroke')
+local Shadow_3 = Instance.new('ImageLabel')
+local UICorner_17 = Instance.new('UICorner')
+local Indicator_2 = Instance.new('Frame')
+local UICorner_18 = Instance.new('UICorner')
+local UIStroke_10 = Instance.new('UIStroke')
+local Interact_2 = Instance.new('TextButton')
+local Title_3 = Instance.new('TextLabel')
+local Speedtoggle = Instance.new('Frame')
+local UIStroke_11 = Instance.new('UIStroke')
+local UICorner_19 = Instance.new('UICorner')
+local Lock_3 = Instance.new('Frame')
+local UIGradient_3 = Instance.new('UIGradient')
+local UICorner_20 = Instance.new('UICorner')
+local Reason_3 = Instance.new('TextLabel')
+local Icon_3 = Instance.new('ImageLabel')
+local Switch_3 = Instance.new('Frame')
+local UICorner_21 = Instance.new('UICorner')
+local UIStroke_12 = Instance.new('UIStroke')
+local Shadow_4 = Instance.new('ImageLabel')
+local UICorner_22 = Instance.new('UICorner')
+local Indicator_3 = Instance.new('Frame')
+local UICorner_23 = Instance.new('UICorner')
+local UIStroke_13 = Instance.new('UIStroke')
+local Interact_3 = Instance.new('TextButton')
+local Title_4 = Instance.new('TextLabel')
+local Input = Instance.new('Frame')
+local UICorner_24 = Instance.new('UICorner')
+local Title_5 = Instance.new('TextLabel')
+local UIStroke_14 = Instance.new('UIStroke')
+local InputFrame = Instance.new('Frame')
+local InputBox = Instance.new('TextBox')
+local UIStroke_15 = Instance.new('UIStroke')
+local UICorner_25 = Instance.new('UICorner')
+local Lock_4 = Instance.new('Frame')
+local UIGradient_4 = Instance.new('UIGradient')
+local UICorner_26 = Instance.new('UICorner')
+local Reason_4 = Instance.new('TextLabel')
+local Icon_4 = Instance.new('ImageLabel')
+local Lines = Instance.new('BoolValue')
+local Box = Instance.new('BoolValue')
 
-Converted["_m0th"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-Converted["_m0th"].Name = "m0th"
-Converted["_m0th"].Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")  -- FIXED: PlayerGui not CoreGui
+-- Properties:
 
--- ... (all other properties - paste from your original m0thv1.lua here to keep sizes/positions exact)
+m0th.Name = 'm0th'
+m0th.DisplayOrder = 0
+m0th.IgnoreGuiInset = false
+m0th.ResetOnSpawn = true
+m0th.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+m0th.Enabled = true
 
-Converted["_Lines"].Name = "Lines"
-Converted["_Lines"].Parent = Converted["_m0th"]
+Frame.Parent = m0th
+Frame.Name = 'Frame'
+Frame.Size = UDim2.new(0, 500, 0, 450)
+Frame.Position = UDim2.new(0.29722702503204346, 0, 0.3091667592525482, 0)
+Frame.AnchorPoint = Vector2.new(0, 0)
+Frame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Frame.BackgroundTransparency = 0
+Frame.BorderSizePixel = 0
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.Visible = true
+Frame.ZIndex = 1
+Frame.LayoutOrder = 0
+Frame.Active = false
+Frame.Interactable = true
+Frame.Rotation = 0
+Frame.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Frame.ClipsDescendants = false
 
-Converted["_Box"].Name = "Box"
-Converted["_Box"].Parent = Converted["_m0th"]
+Frame_1.Parent = Frame
+Frame_1.Name = 'Frame'
+Frame_1.Size = UDim2.new(1, 0, 0, 41)
+Frame_1.Position = UDim2.new(0, 0, 0, 0)
+Frame_1.AnchorPoint = Vector2.new(0, 0)
+Frame_1.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+Frame_1.BackgroundTransparency = 0
+Frame_1.BorderSizePixel = 0
+Frame_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_1.Visible = true
+Frame_1.ZIndex = 1
+Frame_1.LayoutOrder = 0
+Frame_1.Active = false
+Frame_1.Interactable = true
+Frame_1.Rotation = 0
+Frame_1.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Frame_1.ClipsDescendants = false
 
--- Fake Local Scripts (CLEANED - no fake require):
+UICorner.Parent = Frame_1
+UICorner.CornerRadius = UDim.new(0, 9)
 
-local function WQAJ_fake_script() -- Box ESP - FIXED TYPO
-    local script = Instance.new("LocalScript")
-    script.Name = "box"
-    script.Parent = Converted["_m0th"]
+Frame_2.Parent = Frame_1
+Frame_2.Name = 'Frame'
+Frame_2.Size = UDim2.new(1, 0, 0, 27)
+Frame_2.Position = UDim2.new(0, 0, 0.353658527135849, 0)
+Frame_2.AnchorPoint = Vector2.new(0, 0)
+Frame_2.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+Frame_2.BackgroundTransparency = 0
+Frame_2.BorderSizePixel = 0
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.Visible = true
+Frame_2.ZIndex = 1
+Frame_2.LayoutOrder = 0
+Frame_2.Active = false
+Frame_2.Interactable = true
+Frame_2.Rotation = 0
+Frame_2.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Frame_2.ClipsDescendants = false
 
-	local Players = game:GetService("Players")
-	local LocalPlayer = Players.LocalPlayer
-	local Box = script.Parent.Box
-	
-	local ESP_Table = {} 
-	
-	local function AddESP(Character)
-		if not Character or Character == LocalPlayer.Character then return end
-		if ESP_Table[Character] then return end 
+Frame_3.Parent = Frame_1
+Frame_3.Name = 'Frame'
+Frame_3.Size = UDim2.new(1, 0, 0, 1)
+Frame_3.Position = UDim2.new(0, 0, 1, 0)
+Frame_3.AnchorPoint = Vector2.new(0, 0)
+Frame_3.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+Frame_3.BackgroundTransparency = 0
+Frame_3.BorderSizePixel = 0
+Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_3.Visible = true
+Frame_3.ZIndex = 1
+Frame_3.LayoutOrder = 0
+Frame_3.Active = false
+Frame_3.Interactable = true
+Frame_3.Rotation = 0
+Frame_3.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Frame_3.ClipsDescendants = false
 
-		local highlight = Instance.new("Highlight")
-		highlight.Parent = Character
-		highlight.FillColor = Color3.fromRGB(255, 143, 143)   
-		highlight.OutlineColor = Color3.fromRGB(255, 255, 255)
-		highlight.FillTransparency = 0.5
-		highlight.OutlineTransparency = 0
-		highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+UICorner_1.Parent = Frame
+UICorner_1.CornerRadius = UDim.new(0, 9)
 
-		ESP_Table[Character] = highlight
-	end
-	
-	local function RemoveESP(Character)
-		if ESP_Table[Character] then
-			ESP_Table[Character]:Destroy()
-			ESP_Table[Character] = nil
-		end
-	end
-	
-	local function RemoveAllESP()
-		for character, highlight in pairs(ESP_Table) do
-			if highlight then highlight:Destroy() end
-		end
-		table.clear(ESP_Table)
-	end
-	
-	local function OnCharacterAdded(Character)
-		if Box.Value then
-			AddESP(Character)
-		end
+Shadow.Parent = Frame
+Shadow.Name = 'Shadow'
+Shadow.Size = UDim2.new(1, 35, 1, 35)
+Shadow.Position = UDim2.new(0.5, 0, 0.5, 0)
+Shadow.AnchorPoint = Vector2.new(0.5, 0.5)
+Shadow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shadow.BackgroundTransparency = 1
+Shadow.BorderSizePixel = 0
+Shadow.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Shadow.Visible = true
+Shadow.ZIndex = 10
+Shadow.LayoutOrder = 0
+Shadow.Active = false
+Shadow.Interactable = true
+Shadow.Rotation = 0
+Shadow.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Shadow.ClipsDescendants = false
 
-		local humanoid = Character:WaitForChild("Humanoid")
-		humanoid.Died:Connect(function()
-			RemoveESP(Character)
-		end)
-	end
-	
-	local function OnPlayerAdded(Player)
-		if Player == LocalPlayer then return end
+Image.Parent = Shadow
+Image.Name = 'Image'
+Image.Size = UDim2.new(1.600000023841858, 0, 1.2999999523162842, 0)
+Image.Position = UDim2.new(0.5, 0, 0.5, 0)
+Image.AnchorPoint = Vector2.new(0.5, 0.5)
+Image.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Image.BackgroundTransparency = 1
+Image.BorderSizePixel = 0
+Image.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Image.Visible = false
+Image.ZIndex = 0
+Image.LayoutOrder = 0
+Image.Active = false
+Image.Interactable = true
+Image.Rotation = 0
+Image.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Image.ClipsDescendants = false
+Image.Image = 'rbxassetid://5587865193'
+Image.ImageColor3 = Color3.fromRGB(20, 20, 20)
+Image.ScaleType = Enum.ScaleType.Stretch
+Image.ResampleMode = Enum.ResamplerMode.Default
+Image.ImageTransparency = 0.4000000059604645
+Image.ImageRectSize = Vector2.new(0, 0)
+Image.ImageRectOffset = Vector2.new(0, 0)
 
-		if Player.Character then
-			OnCharacterAdded(Player.Character)
-		end
+Elements.Parent = Frame
+Elements.Name = 'Elements'
+Elements.Size = UDim2.new(1, 0, -0.06875026971101761, 409)
+Elements.Position = UDim2.new(0, 0, 0.13555555045604706, 0)
+Elements.AnchorPoint = Vector2.new(0, 0)
+Elements.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Elements.BackgroundTransparency = 1
+Elements.BorderSizePixel = 0
+Elements.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Elements.Visible = true
+Elements.ZIndex = 1
+Elements.LayoutOrder = 0
+Elements.Active = false
+Elements.Interactable = true
+Elements.Rotation = 0
+Elements.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Elements.ClipsDescendants = false
 
-		Player.CharacterAdded:Connect(OnCharacterAdded)
-	end
-	
-	for _, plr in pairs(Players:GetPlayers()) do
-		OnPlayerAdded(plr)
-	end
-	
-	Players.PlayerAdded:Connect(OnPlayerAdded)
-	
-	Players.PlayerRemoving:Connect(function(plr)
-		if plr.Character then
-			RemoveESP(plr.Character)
-		end
-	end)
-	
-	-- FIXED: Bo.Value → Box.Value
-	Box:GetPropertyChangedSignal("Value"):Connect(function()
-		if Box.Value then  -- FIXED TYPO
-			for _, player in ipairs(Players:GetPlayers()) do
-				if player ~= LocalPlayer and player.Character then
-					AddESP(player.Character)
-				end
-			end
-		else
-			RemoveAllESP()
-		end
-	end)
-end
+list.Parent = Elements
+list.Name = 'list'
+list.Size = UDim2.new(1, 0, 1, 0)
+list.Position = UDim2.new(0, 0, 0, 0)
+list.AnchorPoint = Vector2.new(0, 0)
+list.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+list.BackgroundTransparency = 1
+list.BorderSizePixel = 0
+list.BorderColor3 = Color3.fromRGB(0, 0, 0)
+list.Visible = true
+list.ZIndex = 1
+list.LayoutOrder = 0
+list.Active = true
+list.Interactable = true
+list.Rotation = 0
+list.SizeConstraint = Enum.SizeConstraint.RelativeXY
+list.ClipsDescendants = true
 
-local function RZAX_fake_script() -- Line ESP (unchanged)
-    local script = Instance.new("LocalScript")
-    script.Name = "line"
-    script.Parent = Converted["_m0th"]
+UIListLayout.Parent = list
+UIListLayout.Padding = UDim.new(0, 6)
+UIListLayout.FillDirection = Enum.FillDirection.Vertical
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Top
 
-	-- ... (paste your original line script here - no changes needed)
-end
+PlayerButton.Parent = list
+PlayerButton.Name = 'PlayerButton'
+PlayerButton.Size = UDim2.new(0.5, 0, 0, 130)
+PlayerButton.Position = UDim2.new(-0.006315788719803095, 0, 0.39556998014450073, 0)
+PlayerButton.AnchorPoint = Vector2.new(0, 0)
+PlayerButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+PlayerButton.BackgroundTransparency = 0
+PlayerButton.BorderSizePixel = 0
+PlayerButton.BorderColor3 = Color3.fromRGB(27, 42, 53)
+PlayerButton.Visible = true
+PlayerButton.ZIndex = 1
+PlayerButton.LayoutOrder = 0
+PlayerButton.Active = false
+PlayerButton.Interactable = true
+PlayerButton.Rotation = 0
+PlayerButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
+PlayerButton.ClipsDescendants = false
 
-local function CKDKWM_fake_script() -- Aim (unchanged)
-    local script = Instance.new("LocalScript")
-    script.Name = "aim"
-    script.Parent = Converted["_m0th"]
+UICorner_2.Parent = PlayerButton
+UICorner_2.CornerRadius = UDim.new(0, 4)
 
-	-- ... (paste your original aim script here)
-end
+Title.Parent = PlayerButton
+Title.Name = 'Title'
+Title.Size = UDim2.new(0, 237, 0, 14)
+Title.Position = UDim2.new(0, 138, 0, 114)
+Title.AnchorPoint = Vector2.new(0.5, 0.5)
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1
+Title.BorderSizePixel = 0
+Title.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Title.Visible = true
+Title.ZIndex = 3
+Title.LayoutOrder = 0
+Title.TextSize = 14
+Title.Active = false
+Title.Interactable = true
+Title.Rotation = 0
+Title.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Title.ClipsDescendants = false
+Title.Text = 'Username'
+Title.TextSize = 14
+Title.Font = Enum.Font.GothamMedium
+Title.TextColor3 = Color3.fromRGB(240, 240, 240)
+Title.TextWrapped = true
+Title.TextXAlignment = Enum.TextXAlignment.Left
+Title.TextYAlignment = Enum.TextYAlignment.Center
+Title.TextScaled = true
+Title.LineHeight = 1
+Title.MaxVisibleGraphemes = -1
+Title.RichText = false
+Title.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Title.TextStrokeTransparency = 1
+Title.TextTruncate = Enum.TextTruncate.None
+Title.TextTransparency = 0
+Title.TextDirection = Enum.TextDirection.Auto
 
-local function VCPPGAN_fake_script() -- Main - FIXED SCROLL + SPEED
-    local script = Instance.new("LocalScript")
-    script.Name = "Main"
-    script.Parent = Converted["_m0th"]
+UIStroke.Parent = PlayerButton
+UIStroke.Color = Color3.fromRGB(50, 50, 50)
+UIStroke.Transparency = 0
+UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke.Thickness = 1
+UIStroke.LineJoinMode = Enum.LineJoinMode.Round
 
-	script.Parent.Frame.Active = true
-	script.Parent.Frame.Draggable = true
-	
-	local TweenService = game:GetService("TweenService")
-	local RunService = game:GetService("RunService")
-	local Players = game:GetService("Players")
-	
-	local player = Players.LocalPlayer
-	local userId = player.UserId
-	local username = player.Name
-	
-	local UI = script.Parent
-	local Elements = UI.Frame.Elements.list
-	
-	local Aim_toggle  = Elements["Aim-toggle"]
-	local Box_toggle  = Elements["box-toggle"]
-	local Lines_toggle = Elements["lines-toggle"]
-	local Speed_toggle = Elements["Speed-toggle"]
-	
-	local Speed_box = Elements.Input.InputFrame.InputBox
-	
-	local PlayerButton = Elements.PlayerButton
-	local PFP = PlayerButton.PFP
-	local NameLabel = PlayerButton.Title
-	local FPSLabel = PlayerButton.Fps
-	local PlayersLabel = PlayerButton.Players
-	local RegionLabel = PlayerButton.Server
-	local PingLabel = PlayerButton.Ping
-	
-	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-	
-	PingLabel.Text = "Ping: " .. math.floor(player:GetNetworkPing() * 1000) .. "ms"
-	RegionLabel.Text = "Server: " .. tostring(game.PlaceId)
-	
-	local content, ready = Players:GetUserThumbnailAsync(
-		userId,
-		Enum.ThumbnailType.HeadShot,
-		Enum.ThumbnailSize.Size420x420
-	)
-	
-	if ready then
-		PFP.Image = content
-		NameLabel.Text = username
-	else
-		PFP.Image = "rbxasset://textures/face.png"
-		NameLabel.Text = "Loading..."
-	end
-	
-	local lastFrame = tick()
-	local fps = 0
-	
-	RunService.RenderStepped:Connect(function()
-		local now = tick()
-		fps = 1 / (now - lastFrame)
-		lastFrame = now
-	end)
-	
-	task.spawn(function()
-		while true do
-			FPSLabel.Text = "FPS: " .. math.floor(fps)
-			PlayersLabel.Text = "Players: " .. #Players:GetPlayers()
-			task.wait(1)
-		end
-	end)
-	
-	local function setupToggle(toggleUI, valueObjectOrBool, callback)
-		local Switch = toggleUI.Switch
-		local Indicator = Switch.Indicator
-		local Interact = toggleUI.Interact
+PFP.Parent = PlayerButton
+PFP.Name = 'PFP'
+PFP.Size = UDim2.new(0, 85, 0, 85)
+PFP.Position = UDim2.new(0.00800000037997961, 10, 0.42307692766189575, 0)
+PFP.AnchorPoint = Vector2.new(0, 0.5)
+PFP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PFP.BackgroundTransparency = 1
+PFP.BorderSizePixel = 1
+PFP.BorderColor3 = Color3.fromRGB(27, 42, 53)
+PFP.Visible = true
+PFP.ZIndex = 1
+PFP.LayoutOrder = 0
+PFP.Active = false
+PFP.Interactable = true
+PFP.Rotation = 0
+PFP.SizeConstraint = Enum.SizeConstraint.RelativeXY
+PFP.ClipsDescendants = false
+PFP.Image = 'rbxasset://textures/ui/GuiImagePlaceholder.png'
+PFP.ImageColor3 = Color3.fromRGB(255, 255, 255)
+PFP.ScaleType = Enum.ScaleType.Stretch
+PFP.ResampleMode = Enum.ResamplerMode.Default
+PFP.ImageTransparency = 0
+PFP.ImageRectSize = Vector2.new(0, 0)
+PFP.ImageRectOffset = Vector2.new(0, 0)
 
-		local useValueObject = typeof(valueObjectOrBool) == "Instance"
-		local state = useValueObject and valueObjectOrBool.Value or valueObjectOrBool
+UICorner_3.Parent = PFP
+UICorner_3.CornerRadius = UDim.new(2, 0)
 
-		-- force scripts to match existing values on startup
-		if callback then
-			callback(state)
-		end
+UIStroke_1.Parent = PFP
+UIStroke_1.Color = Color3.fromRGB(84, 84, 84)
+UIStroke_1.Transparency = 0
+UIStroke_1.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke_1.Thickness = 3.200000047683716
+UIStroke_1.LineJoinMode = Enum.LineJoinMode.Round
 
-		local function updateVisual()
-			local newPos = state and UDim2.new(1, -20, 0.5, 0) or UDim2.new(1, -40, 0.5, 0)
-			local newColor = state and Color3.fromRGB(0,255,100) or Color3.fromRGB(30,30,30)
+Players.Parent = PlayerButton
+Players.Name = 'Players'
+Players.Size = UDim2.new(0, 126, 0, 14)
+Players.Position = UDim2.new(0, 174, 0, 19)
+Players.AnchorPoint = Vector2.new(0.5, 0.5)
+Players.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Players.BackgroundTransparency = 1
+Players.BorderSizePixel = 0
+Players.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Players.Visible = true
+Players.ZIndex = 3
+Players.LayoutOrder = 0
+Players.TextSize = 14
+Players.Active = false
+Players.Interactable = true
+Players.Rotation = 0
+Players.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Players.ClipsDescendants = false
+Players.Text = 'Players'
+Players.TextSize = 14
+Players.Font = Enum.Font.GothamMedium
+Players.TextColor3 = Color3.fromRGB(240, 240, 240)
+Players.TextWrapped = true
+Players.TextXAlignment = Enum.TextXAlignment.Left
+Players.TextYAlignment = Enum.TextYAlignment.Center
+Players.TextScaled = true
+Players.LineHeight = 1
+Players.MaxVisibleGraphemes = -1
+Players.RichText = false
+Players.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Players.TextStrokeTransparency = 1
+Players.TextTruncate = Enum.TextTruncate.None
+Players.TextTransparency = 0
+Players.TextDirection = Enum.TextDirection.Auto
 
-			TweenService:Create(Indicator, tweenInfo, {Position = newPos}):Play()
-			TweenService:Create(Switch, tweenInfo, {BackgroundColor3 = newColor}):Play()
-		end
+Server.Parent = PlayerButton
+Server.Name = 'Server'
+Server.Size = UDim2.new(0, 126, 0, 14)
+Server.Position = UDim2.new(0, 174, 0, 42)
+Server.AnchorPoint = Vector2.new(0.5, 0.5)
+Server.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Server.BackgroundTransparency = 1
+Server.BorderSizePixel = 0
+Server.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Server.Visible = true
+Server.ZIndex = 3
+Server.LayoutOrder = 0
+Server.TextSize = 14
+Server.Active = false
+Server.Interactable = true
+Server.Rotation = 0
+Server.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Server.ClipsDescendants = false
+Server.Text = 'Server'
+Server.TextSize = 14
+Server.Font = Enum.Font.GothamMedium
+Server.TextColor3 = Color3.fromRGB(240, 240, 240)
+Server.TextWrapped = true
+Server.TextXAlignment = Enum.TextXAlignment.Left
+Server.TextYAlignment = Enum.TextYAlignment.Center
+Server.TextScaled = true
+Server.LineHeight = 1
+Server.MaxVisibleGraphemes = -1
+Server.RichText = false
+Server.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Server.TextStrokeTransparency = 1
+Server.TextTruncate = Enum.TextTruncate.None
+Server.TextTransparency = 0
+Server.TextDirection = Enum.TextDirection.Auto
 
-		Interact.Activated:Connect(function()
-			state = not state
+Fps.Parent = PlayerButton
+Fps.Name = 'Fps'
+Fps.Size = UDim2.new(0, 126, 0, 14)
+Fps.Position = UDim2.new(0, 174, 0, 65)
+Fps.AnchorPoint = Vector2.new(0.5, 0.5)
+Fps.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fps.BackgroundTransparency = 1
+Fps.BorderSizePixel = 0
+Fps.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Fps.Visible = true
+Fps.ZIndex = 3
+Fps.LayoutOrder = 0
+Fps.TextSize = 14
+Fps.Active = false
+Fps.Interactable = true
+Fps.Rotation = 0
+Fps.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Fps.ClipsDescendants = false
+Fps.Text = 'Fps'
+Fps.TextSize = 14
+Fps.Font = Enum.Font.GothamMedium
+Fps.TextColor3 = Color3.fromRGB(240, 240, 240)
+Fps.TextWrapped = true
+Fps.TextXAlignment = Enum.TextXAlignment.Left
+Fps.TextYAlignment = Enum.TextYAlignment.Center
+Fps.TextScaled = true
+Fps.LineHeight = 1
+Fps.MaxVisibleGraphemes = -1
+Fps.RichText = false
+Fps.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Fps.TextStrokeTransparency = 1
+Fps.TextTruncate = Enum.TextTruncate.None
+Fps.TextTransparency = 0
+Fps.TextDirection = Enum.TextDirection.Auto
 
-			if useValueObject then
-				valueObjectOrBool.Value = state
-			end
+Ping.Parent = PlayerButton
+Ping.Name = 'Ping'
+Ping.Size = UDim2.new(0, 126, 0, 14)
+Ping.Position = UDim2.new(0, 174, 0, 90)
+Ping.AnchorPoint = Vector2.new(0.5, 0.5)
+Ping.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Ping.BackgroundTransparency = 1
+Ping.BorderSizePixel = 0
+Ping.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Ping.Visible = true
+Ping.ZIndex = 3
+Ping.LayoutOrder = 0
+Ping.TextSize = 14
+Ping.Active = false
+Ping.Interactable = true
+Ping.Rotation = 0
+Ping.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Ping.ClipsDescendants = false
+Ping.Text = 'Ping'
+Ping.TextSize = 14
+Ping.Font = Enum.Font.GothamMedium
+Ping.TextColor3 = Color3.fromRGB(240, 240, 240)
+Ping.TextWrapped = true
+Ping.TextXAlignment = Enum.TextXAlignment.Left
+Ping.TextYAlignment = Enum.TextYAlignment.Center
+Ping.TextScaled = true
+Ping.LineHeight = 1
+Ping.MaxVisibleGraphemes = -1
+Ping.RichText = false
+Ping.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Ping.TextStrokeTransparency = 1
+Ping.TextTruncate = Enum.TextTruncate.None
+Ping.TextTransparency = 0
+Ping.TextDirection = Enum.TextDirection.Auto
 
-			updateVisual()
+Aimtoggle.Parent = list
+Aimtoggle.Name = 'Aim-toggle'
+Aimtoggle.Size = UDim2.new(0, 465, 0, 40)
+Aimtoggle.Position = UDim2.new(0.10593220591545105, 0, 0, 0)
+Aimtoggle.AnchorPoint = Vector2.new(0, 0)
+Aimtoggle.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Aimtoggle.BackgroundTransparency = 0
+Aimtoggle.BorderSizePixel = 0
+Aimtoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Aimtoggle.Visible = true
+Aimtoggle.ZIndex = 1
+Aimtoggle.LayoutOrder = 0
+Aimtoggle.Active = false
+Aimtoggle.Interactable = true
+Aimtoggle.Rotation = 0
+Aimtoggle.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Aimtoggle.ClipsDescendants = false
 
-			if callback then callback(state) end
-		end)
+UIStroke_2.Parent = Aimtoggle
+UIStroke_2.Color = Color3.fromRGB(50, 50, 50)
+UIStroke_2.Transparency = 0
+UIStroke_2.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke_2.Thickness = 1
+UIStroke_2.LineJoinMode = Enum.LineJoinMode.Round
 
-		updateVisual()
-	end
-	
-	setupToggle(Aim_toggle, false, function(state)
-		UI.aim.Disabled = not state
-	end)
-	
-	setupToggle(Box_toggle, UI.Box, function(state)
-	end)
-	
-	setupToggle(Lines_toggle, UI.Lines, function(state)
-	end)
-	
-	-- Speed Toggle - FIXED with input control
-	local speedToggleOn = false
-	setupToggle(Speed_toggle, speedToggleOn, function(state)
-		speedToggleOn = state
-		-- Control input box
-		local inputFrame = Elements.Input.InputFrame
-		inputFrame.BackgroundColor3 = state and Color3.fromRGB(50,50,50) or Color3.fromRGB(25,25,25)
-		Speed_box.Active = state
-		Speed_box.Focusable = state
-	end)
-	
-	-- FIXED SPEED INPUT
-	Speed_box.FocusLost:Connect(function(enterPressed)
-		if enterPressed and speedToggleOn then
-			local char = player.Character
-			if char then
-				local humanoid = char:FindFirstChild("Humanoid")
-				if humanoid then
-					local speed = tonumber(Speed_box.Text)
-					if speed and speed >= 16 and speed <= 300 then
-						humanoid.WalkSpeed = speed
-						Speed_box.Text = ""
-					else
-						Speed_box.Text = "16-300 only"
-						task.wait(1)
-						Speed_box.Text = ""
-					end
-				end
-			end
-		end
-	end)
-	
-	-- FIXED: ScrollingFrame CanvasSize
-	local list = Elements.list
-	list.ScrollingDirection = Enum.ScrollingDirection.Y
-	list.CanvasSize = UDim2.new(0, 0, 0, list.UIListLayout.AbsoluteContentSize.Y)
-	
-	list.UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
-		list.CanvasSize = UDim2.new(0, 0, 0, list.UIListLayout.AbsoluteContentSize.Y)
-	end)
-	
-	task.wait(0.1)
-	list.CanvasSize = UDim2.new(0, 0, 0, list.UIListLayout.AbsoluteContentSize.Y)
-end
+UICorner_4.Parent = Aimtoggle
+UICorner_4.CornerRadius = UDim.new(0, 4)
 
-coroutine.wrap(WQAJ_fake_script)()
-coroutine.wrap(RZAX_fake_script)()
-coroutine.wrap(CKDKWM_fake_script)()
-coroutine.wrap(VCPPGAN_fake_script)()
+Lock.Parent = Aimtoggle
+Lock.Name = 'Lock'
+Lock.Size = UDim2.new(1, 0, 1, 0)
+Lock.Position = UDim2.new(1, 0, 0, 0)
+Lock.AnchorPoint = Vector2.new(1, 0)
+Lock.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Lock.BackgroundTransparency = 1
+Lock.BorderSizePixel = 0
+Lock.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Lock.Visible = true
+Lock.ZIndex = 5
+Lock.LayoutOrder = 0
+Lock.Active = false
+Lock.Interactable = true
+Lock.Rotation = 0
+Lock.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Lock.ClipsDescendants = false
+
+UIGradient.Parent = Lock
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient.Rotation = 0
+UIGradient.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 0.32), NumberSequenceKeypoint.new(0.50, 0.10), NumberSequenceKeypoint.new(1.00, 0.32)}
+UIGradient.Offset = Vector2.new(0, 0)
+
+UICorner_5.Parent = Lock
+UICorner_5.CornerRadius = UDim.new(0, 4)
+
+Reason.Parent = Lock
+Reason.Name = 'Reason'
+Reason.Size = UDim2.new(0, 0, 1, 0)
+Reason.Position = UDim2.new(0.5, 0, 0.5, 0)
+Reason.AnchorPoint = Vector2.new(0.5, 0.5)
+Reason.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Reason.BackgroundTransparency = 1
+Reason.BorderSizePixel = 0
+Reason.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Reason.Visible = true
+Reason.ZIndex = 5
+Reason.LayoutOrder = 0
+Reason.TextSize = 13
+Reason.Active = false
+Reason.Interactable = true
+Reason.Rotation = 0
+Reason.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Reason.ClipsDescendants = false
+Reason.Text = 'Locked Reason'
+Reason.TextSize = 13
+Reason.Font = Enum.Font.GothamMedium
+Reason.TextColor3 = Color3.fromRGB(175, 175, 175)
+Reason.TextWrapped = false
+Reason.TextXAlignment = Enum.TextXAlignment.Center
+Reason.TextYAlignment = Enum.TextYAlignment.Center
+Reason.TextScaled = false
+Reason.LineHeight = 1
+Reason.MaxVisibleGraphemes = -1
+Reason.RichText = false
+Reason.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Reason.TextStrokeTransparency = 1
+Reason.TextTruncate = Enum.TextTruncate.None
+Reason.TextTransparency = 1
+Reason.TextDirection = Enum.TextDirection.Auto
+
+Icon.Parent = Reason
+Icon.Name = 'Icon'
+Icon.Size = UDim2.new(0, 16, 0, 16)
+Icon.Position = UDim2.new(1, 20, 0.5, 0)
+Icon.AnchorPoint = Vector2.new(0, 0.5)
+Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon.BackgroundTransparency = 1
+Icon.BorderSizePixel = 0
+Icon.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Icon.Visible = true
+Icon.ZIndex = 5
+Icon.LayoutOrder = 0
+Icon.Active = false
+Icon.Interactable = true
+Icon.Rotation = 0
+Icon.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Icon.ClipsDescendants = false
+Icon.Image = 'rbxassetid://5743022869'
+Icon.ImageColor3 = Color3.fromRGB(175, 175, 175)
+Icon.ScaleType = Enum.ScaleType.Stretch
+Icon.ResampleMode = Enum.ResamplerMode.Default
+Icon.ImageTransparency = 1
+Icon.ImageRectSize = Vector2.new(0, 0)
+Icon.ImageRectOffset = Vector2.new(0, 0)
+
+Switch.Parent = Aimtoggle
+Switch.Name = 'Switch'
+Switch.Size = UDim2.new(0, 43, 0, 21)
+Switch.Position = UDim2.new(1, -10, 0, 20)
+Switch.AnchorPoint = Vector2.new(1, 0.5)
+Switch.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Switch.BackgroundTransparency = 0
+Switch.BorderSizePixel = 0
+Switch.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Switch.Visible = true
+Switch.ZIndex = 1
+Switch.LayoutOrder = 0
+Switch.Active = false
+Switch.Interactable = true
+Switch.Rotation = 0
+Switch.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Switch.ClipsDescendants = false
+
+UICorner_6.Parent = Switch
+UICorner_6.CornerRadius = UDim.new(0, 15)
+
+UIStroke_3.Parent = Switch
+UIStroke_3.Color = Color3.fromRGB(65, 65, 65)
+UIStroke_3.Transparency = 0
+UIStroke_3.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke_3.Thickness = 1
+UIStroke_3.LineJoinMode = Enum.LineJoinMode.Round
+
+Shadow_1.Parent = Switch
+Shadow_1.Name = 'Shadow'
+Shadow_1.Size = UDim2.new(1, 2, 1, 2)
+Shadow_1.Position = UDim2.new(0.5, 0, 0.5, 0)
+Shadow_1.AnchorPoint = Vector2.new(0.5, 0.5)
+Shadow_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shadow_1.BackgroundTransparency = 1
+Shadow_1.BorderSizePixel = 0
+Shadow_1.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Shadow_1.Visible = true
+Shadow_1.ZIndex = 3
+Shadow_1.LayoutOrder = 0
+Shadow_1.Active = false
+Shadow_1.Interactable = true
+Shadow_1.Rotation = 0
+Shadow_1.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Shadow_1.ClipsDescendants = false
+Shadow_1.Image = 'rbxassetid://3602733521'
+Shadow_1.ImageColor3 = Color3.fromRGB(20, 20, 20)
+Shadow_1.ScaleType = Enum.ScaleType.Stretch
+Shadow_1.ResampleMode = Enum.ResamplerMode.Default
+Shadow_1.ImageTransparency = 0.6000000238418579
+Shadow_1.ImageRectSize = Vector2.new(0, 0)
+Shadow_1.ImageRectOffset = Vector2.new(0, 0)
+
+UICorner_7.Parent = Shadow_1
+UICorner_7.CornerRadius = UDim.new(0, 15)
+
+Indicator.Parent = Switch
+Indicator.Name = 'Indicator'
+Indicator.Size = UDim2.new(0, 17, 0, 17)
+Indicator.Position = UDim2.new(1, -40, 0.5, 0)
+Indicator.AnchorPoint = Vector2.new(0, 0.5)
+Indicator.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+Indicator.BackgroundTransparency = 0
+Indicator.BorderSizePixel = 0
+Indicator.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Indicator.Visible = true
+Indicator.ZIndex = 1
+Indicator.LayoutOrder = 0
+Indicator.Active = false
+Indicator.Interactable = true
+Indicator.Rotation = 0
+Indicator.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Indicator.ClipsDescendants = false
+
+UICorner_8.Parent = Indicator
+UICorner_8.CornerRadius = UDim.new(1, 0)
+
+UIStroke_4.Parent = Indicator
+UIStroke_4.Color = Color3.fromRGB(125, 125, 125)
+UIStroke_4.Transparency = 0
+UIStroke_4.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke_4.Thickness = 1.2000000476837158
+UIStroke_4.LineJoinMode = Enum.LineJoinMode.Round
+
+Interact.Parent = Aimtoggle
+Interact.Name = 'Interact'
+Interact.Size = UDim2.new(1, 0, 1, 0)
+Interact.Position = UDim2.new(0.5, 0, 0.5, 0)
+Interact.AnchorPoint = Vector2.new(0.5, 0.5)
+Interact.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Interact.BackgroundTransparency = 1
+Interact.BorderSizePixel = 0
+Interact.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Interact.Visible = true
+Interact.ZIndex = 5
+Interact.LayoutOrder = 0
+Interact.TextSize = 14
+Interact.Active = true
+Interact.Interactable = true
+Interact.Rotation = 0
+Interact.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Interact.ClipsDescendants = false
+Interact.Text = ''
+Interact.TextSize = 14
+Interact.Font = Enum.Font.SourceSans
+Interact.TextColor3 = Color3.fromRGB(0, 0, 0)
+Interact.TextWrapped = false
+Interact.TextXAlignment = Enum.TextXAlignment.Center
+Interact.TextYAlignment = Enum.TextYAlignment.Center
+Interact.TextScaled = false
+Interact.LineHeight = 1
+Interact.MaxVisibleGraphemes = -1
+Interact.RichText = false
+Interact.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Interact.TextStrokeTransparency = 1
+Interact.TextTruncate = Enum.TextTruncate.None
+Interact.TextTransparency = 1
+Interact.TextDirection = Enum.TextDirection.Auto
+
+Title_1.Parent = Aimtoggle
+Title_1.Name = 'Title'
+Title_1.Size = UDim2.new(0, 385, 0, 14)
+Title_1.Position = UDim2.new(1, -63, 0.5, 0)
+Title_1.AnchorPoint = Vector2.new(1, 0.5)
+Title_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_1.BackgroundTransparency = 1
+Title_1.BorderSizePixel = 0
+Title_1.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Title_1.Visible = true
+Title_1.ZIndex = 1
+Title_1.LayoutOrder = 0
+Title_1.TextSize = 14
+Title_1.Active = false
+Title_1.Interactable = true
+Title_1.Rotation = 0
+Title_1.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Title_1.ClipsDescendants = false
+Title_1.Text = 'Aimbot'
+Title_1.TextSize = 14
+Title_1.Font = Enum.Font.GothamMedium
+Title_1.TextColor3 = Color3.fromRGB(240, 240, 240)
+Title_1.TextWrapped = true
+Title_1.TextXAlignment = Enum.TextXAlignment.Left
+Title_1.TextYAlignment = Enum.TextYAlignment.Center
+Title_1.TextScaled = true
+Title_1.LineHeight = 1
+Title_1.MaxVisibleGraphemes = -1
+Title_1.RichText = false
+Title_1.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Title_1.TextStrokeTransparency = 1
+Title_1.TextTruncate = Enum.TextTruncate.None
+Title_1.TextTransparency = 0
+Title_1.TextDirection = Enum.TextDirection.Auto
+
+Placeholder.Parent = list
+Placeholder.Name = 'Placeholder'
+Placeholder.Size = UDim2.new(0, 1, 0, 1)
+Placeholder.Position = UDim2.new(0, 0, 0, 0)
+Placeholder.AnchorPoint = Vector2.new(0, 0)
+Placeholder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Placeholder.BackgroundTransparency = 1
+Placeholder.BorderSizePixel = 0
+Placeholder.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Placeholder.Visible = true
+Placeholder.ZIndex = 1
+Placeholder.LayoutOrder = 999999999
+Placeholder.Active = false
+Placeholder.Interactable = true
+Placeholder.Rotation = 0
+Placeholder.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Placeholder.ClipsDescendants = false
+
+Placeholder_1.Parent = list
+Placeholder_1.Name = 'Placeholder'
+Placeholder_1.Size = UDim2.new(0, 1, 0, 1)
+Placeholder_1.Position = UDim2.new(0, 0, 0, 0)
+Placeholder_1.AnchorPoint = Vector2.new(0, 0)
+Placeholder_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Placeholder_1.BackgroundTransparency = 1
+Placeholder_1.BorderSizePixel = 0
+Placeholder_1.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Placeholder_1.Visible = true
+Placeholder_1.ZIndex = 1
+Placeholder_1.LayoutOrder = -1
+Placeholder_1.Active = false
+Placeholder_1.Interactable = true
+Placeholder_1.Rotation = 0
+Placeholder_1.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Placeholder_1.ClipsDescendants = false
+
+boxtoggle.Parent = list
+boxtoggle.Name = 'box-toggle'
+boxtoggle.Size = UDim2.new(0, 465, 0, 40)
+boxtoggle.Position = UDim2.new(0.10593220591545105, 0, 0, 0)
+boxtoggle.AnchorPoint = Vector2.new(0, 0)
+boxtoggle.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+boxtoggle.BackgroundTransparency = 0
+boxtoggle.BorderSizePixel = 0
+boxtoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+boxtoggle.Visible = true
+boxtoggle.ZIndex = 1
+boxtoggle.LayoutOrder = 0
+boxtoggle.Active = false
+boxtoggle.Interactable = true
+boxtoggle.Rotation = 0
+boxtoggle.SizeConstraint = Enum.SizeConstraint.RelativeXY
+boxtoggle.ClipsDescendants = false
+
+UIStroke_5.Parent = boxtoggle
+UIStroke_5.Color = Color3.fromRGB(50, 50, 50)
+UIStroke_5.Transparency = 0
+UIStroke_5.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke_5.Thickness = 1
+UIStroke_5.LineJoinMode = Enum.LineJoinMode.Round
+
+UICorner_9.Parent = boxtoggle
+UICorner_9.CornerRadius = UDim.new(0, 4)
+
+Lock_1.Parent = boxtoggle
+Lock_1.Name = 'Lock'
+Lock_1.Size = UDim2.new(1, 0, 1, 0)
+Lock_1.Position = UDim2.new(1, 0, 0, 0)
+Lock_1.AnchorPoint = Vector2.new(1, 0)
+Lock_1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Lock_1.BackgroundTransparency = 1
+Lock_1.BorderSizePixel = 0
+Lock_1.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Lock_1.Visible = true
+Lock_1.ZIndex = 5
+Lock_1.LayoutOrder = 0
+Lock_1.Active = false
+Lock_1.Interactable = true
+Lock_1.Rotation = 0
+Lock_1.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Lock_1.ClipsDescendants = false
+
+UIGradient_1.Parent = Lock_1
+UIGradient_1.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient_1.Rotation = 0
+UIGradient_1.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 0.32), NumberSequenceKeypoint.new(0.50, 0.10), NumberSequenceKeypoint.new(1.00, 0.32)}
+UIGradient_1.Offset = Vector2.new(0, 0)
+
+UICorner_10.Parent = Lock_1
+UICorner_10.CornerRadius = UDim.new(0, 4)
+
+Reason_1.Parent = Lock_1
+Reason_1.Name = 'Reason'
+Reason_1.Size = UDim2.new(0, 0, 1, 0)
+Reason_1.Position = UDim2.new(0.5, 0, 0.5, 0)
+Reason_1.AnchorPoint = Vector2.new(0.5, 0.5)
+Reason_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Reason_1.BackgroundTransparency = 1
+Reason_1.BorderSizePixel = 0
+Reason_1.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Reason_1.Visible = true
+Reason_1.ZIndex = 5
+Reason_1.LayoutOrder = 0
+Reason_1.TextSize = 13
+Reason_1.Active = false
+Reason_1.Interactable = true
+Reason_1.Rotation = 0
+Reason_1.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Reason_1.ClipsDescendants = false
+Reason_1.Text = 'Locked Reason'
+Reason_1.TextSize = 13
+Reason_1.Font = Enum.Font.GothamMedium
+Reason_1.TextColor3 = Color3.fromRGB(175, 175, 175)
+Reason_1.TextWrapped = false
+Reason_1.TextXAlignment = Enum.TextXAlignment.Center
+Reason_1.TextYAlignment = Enum.TextYAlignment.Center
+Reason_1.TextScaled = false
+Reason_1.LineHeight = 1
+Reason_1.MaxVisibleGraphemes = -1
+Reason_1.RichText = false
+Reason_1.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Reason_1.TextStrokeTransparency = 1
+Reason_1.TextTruncate = Enum.TextTruncate.None
+Reason_1.TextTransparency = 1
+Reason_1.TextDirection = Enum.TextDirection.Auto
+
+Icon_1.Parent = Reason_1
+Icon_1.Name = 'Icon'
+Icon_1.Size = UDim2.new(0, 16, 0, 16)
+Icon_1.Position = UDim2.new(1, 20, 0.5, 0)
+Icon_1.AnchorPoint = Vector2.new(0, 0.5)
+Icon_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon_1.BackgroundTransparency = 1
+Icon_1.BorderSizePixel = 0
+Icon_1.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Icon_1.Visible = true
+Icon_1.ZIndex = 5
+Icon_1.LayoutOrder = 0
+Icon_1.Active = false
+Icon_1.Interactable = true
+Icon_1.Rotation = 0
+Icon_1.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Icon_1.ClipsDescendants = false
+Icon_1.Image = 'rbxassetid://5743022869'
+Icon_1.ImageColor3 = Color3.fromRGB(175, 175, 175)
+Icon_1.ScaleType = Enum.ScaleType.Stretch
+Icon_1.ResampleMode = Enum.ResamplerMode.Default
+Icon_1.ImageTransparency = 1
+Icon_1.ImageRectSize = Vector2.new(0, 0)
+Icon_1.ImageRectOffset = Vector2.new(0, 0)
+
+Switch_1.Parent = boxtoggle
+Switch_1.Name = 'Switch'
+Switch_1.Size = UDim2.new(0, 43, 0, 21)
+Switch_1.Position = UDim2.new(1, -10, 0, 20)
+Switch_1.AnchorPoint = Vector2.new(1, 0.5)
+Switch_1.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Switch_1.BackgroundTransparency = 0
+Switch_1.BorderSizePixel = 0
+Switch_1.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Switch_1.Visible = true
+Switch_1.ZIndex = 1
+Switch_1.LayoutOrder = 0
+Switch_1.Active = false
+Switch_1.Interactable = true
+Switch_1.Rotation = 0
+Switch_1.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Switch_1.ClipsDescendants = false
+
+UICorner_11.Parent = Switch_1
+UICorner_11.CornerRadius = UDim.new(0, 15)
+
+UIStroke_6.Parent = Switch_1
+UIStroke_6.Color = Color3.fromRGB(65, 65, 65)
+UIStroke_6.Transparency = 0
+UIStroke_6.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke_6.Thickness = 1
+UIStroke_6.LineJoinMode = Enum.LineJoinMode.Round
+
+Shadow_2.Parent = Switch_1
+Shadow_2.Name = 'Shadow'
+Shadow_2.Size = UDim2.new(1, 2, 1, 2)
+Shadow_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+Shadow_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Shadow_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shadow_2.BackgroundTransparency = 1
+Shadow_2.BorderSizePixel = 0
+Shadow_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Shadow_2.Visible = true
+Shadow_2.ZIndex = 3
+Shadow_2.LayoutOrder = 0
+Shadow_2.Active = false
+Shadow_2.Interactable = true
+Shadow_2.Rotation = 0
+Shadow_2.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Shadow_2.ClipsDescendants = false
+Shadow_2.Image = 'rbxassetid://3602733521'
+Shadow_2.ImageColor3 = Color3.fromRGB(20, 20, 20)
+Shadow_2.ScaleType = Enum.ScaleType.Stretch
+Shadow_2.ResampleMode = Enum.ResamplerMode.Default
+Shadow_2.ImageTransparency = 0.6000000238418579
+Shadow_2.ImageRectSize = Vector2.new(0, 0)
+Shadow_2.ImageRectOffset = Vector2.new(0, 0)
+
+UICorner_12.Parent = Shadow_2
+UICorner_12.CornerRadius = UDim.new(0, 15)
+
+Indicator_1.Parent = Switch_1
+Indicator_1.Name = 'Indicator'
+Indicator_1.Size = UDim2.new(0, 17, 0, 17)
+Indicator_1.Position = UDim2.new(1, -40, 0.5, 0)
+Indicator_1.AnchorPoint = Vector2.new(0, 0.5)
+Indicator_1.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+Indicator_1.BackgroundTransparency = 0
+Indicator_1.BorderSizePixel = 0
+Indicator_1.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Indicator_1.Visible = true
+Indicator_1.ZIndex = 1
+Indicator_1.LayoutOrder = 0
+Indicator_1.Active = false
+Indicator_1.Interactable = true
+Indicator_1.Rotation = 0
+Indicator_1.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Indicator_1.ClipsDescendants = false
+
+UICorner_13.Parent = Indicator_1
+UICorner_13.CornerRadius = UDim.new(1, 0)
+
+UIStroke_7.Parent = Indicator_1
+UIStroke_7.Color = Color3.fromRGB(125, 125, 125)
+UIStroke_7.Transparency = 0
+UIStroke_7.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke_7.Thickness = 1.2000000476837158
+UIStroke_7.LineJoinMode = Enum.LineJoinMode.Round
+
+Interact_1.Parent = boxtoggle
+Interact_1.Name = 'Interact'
+Interact_1.Size = UDim2.new(1, 0, 1, 0)
+Interact_1.Position = UDim2.new(0.5, 0, 0.5, 0)
+Interact_1.AnchorPoint = Vector2.new(0.5, 0.5)
+Interact_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Interact_1.BackgroundTransparency = 1
+Interact_1.BorderSizePixel = 0
+Interact_1.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Interact_1.Visible = true
+Interact_1.ZIndex = 5
+Interact_1.LayoutOrder = 0
+Interact_1.TextSize = 14
+Interact_1.Active = true
+Interact_1.Interactable = true
+Interact_1.Rotation = 0
+Interact_1.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Interact_1.ClipsDescendants = false
+Interact_1.Text = ''
+Interact_1.TextSize = 14
+Interact_1.Font = Enum.Font.SourceSans
+Interact_1.TextColor3 = Color3.fromRGB(0, 0, 0)
+Interact_1.TextWrapped = false
+Interact_1.TextXAlignment = Enum.TextXAlignment.Center
+Interact_1.TextYAlignment = Enum.TextYAlignment.Center
+Interact_1.TextScaled = false
+Interact_1.LineHeight = 1
+Interact_1.MaxVisibleGraphemes = -1
+Interact_1.RichText = false
+Interact_1.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Interact_1.TextStrokeTransparency = 1
+Interact_1.TextTruncate = Enum.TextTruncate.None
+Interact_1.TextTransparency = 1
+Interact_1.TextDirection = Enum.TextDirection.Auto
+
+Title_2.Parent = boxtoggle
+Title_2.Name = 'Title'
+Title_2.Size = UDim2.new(0, 385, 0, 14)
+Title_2.Position = UDim2.new(1, -63, 0.5, 0)
+Title_2.AnchorPoint = Vector2.new(1, 0.5)
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1
+Title_2.BorderSizePixel = 0
+Title_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Title_2.Visible = true
+Title_2.ZIndex = 1
+Title_2.LayoutOrder = 0
+Title_2.TextSize = 14
+Title_2.Active = false
+Title_2.Interactable = true
+Title_2.Rotation = 0
+Title_2.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Title_2.ClipsDescendants = false
+Title_2.Text = 'Box esp'
+Title_2.TextSize = 14
+Title_2.Font = Enum.Font.GothamMedium
+Title_2.TextColor3 = Color3.fromRGB(240, 240, 240)
+Title_2.TextWrapped = true
+Title_2.TextXAlignment = Enum.TextXAlignment.Left
+Title_2.TextYAlignment = Enum.TextYAlignment.Center
+Title_2.TextScaled = true
+Title_2.LineHeight = 1
+Title_2.MaxVisibleGraphemes = -1
+Title_2.RichText = false
+Title_2.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Title_2.TextStrokeTransparency = 1
+Title_2.TextTruncate = Enum.TextTruncate.None
+Title_2.TextTransparency = 0
+Title_2.TextDirection = Enum.TextDirection.Auto
+
+linestoggle.Parent = list
+linestoggle.Name = 'lines-toggle'
+linestoggle.Size = UDim2.new(0, 465, 0, 40)
+linestoggle.Position = UDim2.new(0.10593220591545105, 0, 0, 0)
+linestoggle.AnchorPoint = Vector2.new(0, 0)
+linestoggle.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+linestoggle.BackgroundTransparency = 0
+linestoggle.BorderSizePixel = 0
+linestoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+linestoggle.Visible = true
+linestoggle.ZIndex = 1
+linestoggle.LayoutOrder = 0
+linestoggle.Active = false
+linestoggle.Interactable = true
+linestoggle.Rotation = 0
+linestoggle.SizeConstraint = Enum.SizeConstraint.RelativeXY
+linestoggle.ClipsDescendants = false
+
+UIStroke_8.Parent = linestoggle
+UIStroke_8.Color = Color3.fromRGB(50, 50, 50)
+UIStroke_8.Transparency = 0
+UIStroke_8.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke_8.Thickness = 1
+UIStroke_8.LineJoinMode = Enum.LineJoinMode.Round
+
+UICorner_14.Parent = linestoggle
+UICorner_14.CornerRadius = UDim.new(0, 4)
+
+Lock_2.Parent = linestoggle
+Lock_2.Name = 'Lock'
+Lock_2.Size = UDim2.new(1, 0, 1, 0)
+Lock_2.Position = UDim2.new(1, 0, 0, 0)
+Lock_2.AnchorPoint = Vector2.new(1, 0)
+Lock_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Lock_2.BackgroundTransparency = 1
+Lock_2.BorderSizePixel = 0
+Lock_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Lock_2.Visible = true
+Lock_2.ZIndex = 5
+Lock_2.LayoutOrder = 0
+Lock_2.Active = false
+Lock_2.Interactable = true
+Lock_2.Rotation = 0
+Lock_2.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Lock_2.ClipsDescendants = false
+
+UIGradient_2.Parent = Lock_2
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient_2.Rotation = 0
+UIGradient_2.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 0.32), NumberSequenceKeypoint.new(0.50, 0.10), NumberSequenceKeypoint.new(1.00, 0.32)}
+UIGradient_2.Offset = Vector2.new(0, 0)
+
+UICorner_15.Parent = Lock_2
+UICorner_15.CornerRadius = UDim.new(0, 4)
+
+Reason_2.Parent = Lock_2
+Reason_2.Name = 'Reason'
+Reason_2.Size = UDim2.new(0, 0, 1, 0)
+Reason_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+Reason_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Reason_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Reason_2.BackgroundTransparency = 1
+Reason_2.BorderSizePixel = 0
+Reason_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Reason_2.Visible = true
+Reason_2.ZIndex = 5
+Reason_2.LayoutOrder = 0
+Reason_2.TextSize = 13
+Reason_2.Active = false
+Reason_2.Interactable = true
+Reason_2.Rotation = 0
+Reason_2.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Reason_2.ClipsDescendants = false
+Reason_2.Text = 'Locked Reason'
+Reason_2.TextSize = 13
+Reason_2.Font = Enum.Font.GothamMedium
+Reason_2.TextColor3 = Color3.fromRGB(175, 175, 175)
+Reason_2.TextWrapped = false
+Reason_2.TextXAlignment = Enum.TextXAlignment.Center
+Reason_2.TextYAlignment = Enum.TextYAlignment.Center
+Reason_2.TextScaled = false
+Reason_2.LineHeight = 1
+Reason_2.MaxVisibleGraphemes = -1
+Reason_2.RichText = false
+Reason_2.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Reason_2.TextStrokeTransparency = 1
+Reason_2.TextTruncate = Enum.TextTruncate.None
+Reason_2.TextTransparency = 1
+Reason_2.TextDirection = Enum.TextDirection.Auto
+
+Icon_2.Parent = Reason_2
+Icon_2.Name = 'Icon'
+Icon_2.Size = UDim2.new(0, 16, 0, 16)
+Icon_2.Position = UDim2.new(1, 20, 0.5, 0)
+Icon_2.AnchorPoint = Vector2.new(0, 0.5)
+Icon_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon_2.BackgroundTransparency = 1
+Icon_2.BorderSizePixel = 0
+Icon_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Icon_2.Visible = true
+Icon_2.ZIndex = 5
+Icon_2.LayoutOrder = 0
+Icon_2.Active = false
+Icon_2.Interactable = true
+Icon_2.Rotation = 0
+Icon_2.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Icon_2.ClipsDescendants = false
+Icon_2.Image = 'rbxassetid://5743022869'
+Icon_2.ImageColor3 = Color3.fromRGB(175, 175, 175)
+Icon_2.ScaleType = Enum.ScaleType.Stretch
+Icon_2.ResampleMode = Enum.ResamplerMode.Default
+Icon_2.ImageTransparency = 1
+Icon_2.ImageRectSize = Vector2.new(0, 0)
+Icon_2.ImageRectOffset = Vector2.new(0, 0)
+
+Switch_2.Parent = linestoggle
+Switch_2.Name = 'Switch'
+Switch_2.Size = UDim2.new(0, 43, 0, 21)
+Switch_2.Position = UDim2.new(1, -10, 0, 20)
+Switch_2.AnchorPoint = Vector2.new(1, 0.5)
+Switch_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Switch_2.BackgroundTransparency = 0
+Switch_2.BorderSizePixel = 0
+Switch_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Switch_2.Visible = true
+Switch_2.ZIndex = 1
+Switch_2.LayoutOrder = 0
+Switch_2.Active = false
+Switch_2.Interactable = true
+Switch_2.Rotation = 0
+Switch_2.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Switch_2.ClipsDescendants = false
+
+UICorner_16.Parent = Switch_2
+UICorner_16.CornerRadius = UDim.new(0, 15)
+
+UIStroke_9.Parent = Switch_2
+UIStroke_9.Color = Color3.fromRGB(65, 65, 65)
+UIStroke_9.Transparency = 0
+UIStroke_9.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke_9.Thickness = 1
+UIStroke_9.LineJoinMode = Enum.LineJoinMode.Round
+
+Shadow_3.Parent = Switch_2
+Shadow_3.Name = 'Shadow'
+Shadow_3.Size = UDim2.new(1, 2, 1, 2)
+Shadow_3.Position = UDim2.new(0.5, 0, 0.5, 0)
+Shadow_3.AnchorPoint = Vector2.new(0.5, 0.5)
+Shadow_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shadow_3.BackgroundTransparency = 1
+Shadow_3.BorderSizePixel = 0
+Shadow_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Shadow_3.Visible = true
+Shadow_3.ZIndex = 3
+Shadow_3.LayoutOrder = 0
+Shadow_3.Active = false
+Shadow_3.Interactable = true
+Shadow_3.Rotation = 0
+Shadow_3.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Shadow_3.ClipsDescendants = false
+Shadow_3.Image = 'rbxassetid://3602733521'
+Shadow_3.ImageColor3 = Color3.fromRGB(20, 20, 20)
+Shadow_3.ScaleType = Enum.ScaleType.Stretch
+Shadow_3.ResampleMode = Enum.ResamplerMode.Default
+Shadow_3.ImageTransparency = 0.6000000238418579
+Shadow_3.ImageRectSize = Vector2.new(0, 0)
+Shadow_3.ImageRectOffset = Vector2.new(0, 0)
+
+UICorner_17.Parent = Shadow_3
+UICorner_17.CornerRadius = UDim.new(0, 15)
+
+Indicator_2.Parent = Switch_2
+Indicator_2.Name = 'Indicator'
+Indicator_2.Size = UDim2.new(0, 17, 0, 17)
+Indicator_2.Position = UDim2.new(1, -40, 0.5, 0)
+Indicator_2.AnchorPoint = Vector2.new(0, 0.5)
+Indicator_2.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+Indicator_2.BackgroundTransparency = 0
+Indicator_2.BorderSizePixel = 0
+Indicator_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Indicator_2.Visible = true
+Indicator_2.ZIndex = 1
+Indicator_2.LayoutOrder = 0
+Indicator_2.Active = false
+Indicator_2.Interactable = true
+Indicator_2.Rotation = 0
+Indicator_2.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Indicator_2.ClipsDescendants = false
+
+UICorner_18.Parent = Indicator_2
+UICorner_18.CornerRadius = UDim.new(1, 0)
+
+UIStroke_10.Parent = Indicator_2
+UIStroke_10.Color = Color3.fromRGB(125, 125, 125)
+UIStroke_10.Transparency = 0
+UIStroke_10.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke_10.Thickness = 1.2000000476837158
+UIStroke_10.LineJoinMode = Enum.LineJoinMode.Round
+
+Interact_2.Parent = linestoggle
+Interact_2.Name = 'Interact'
+Interact_2.Size = UDim2.new(1, 0, 1, 0)
+Interact_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+Interact_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Interact_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Interact_2.BackgroundTransparency = 1
+Interact_2.BorderSizePixel = 0
+Interact_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Interact_2.Visible = true
+Interact_2.ZIndex = 5
+Interact_2.LayoutOrder = 0
+Interact_2.TextSize = 14
+Interact_2.Active = true
+Interact_2.Interactable = true
+Interact_2.Rotation = 0
+Interact_2.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Interact_2.ClipsDescendants = false
+Interact_2.Text = ''
+Interact_2.TextSize = 14
+Interact_2.Font = Enum.Font.SourceSans
+Interact_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Interact_2.TextWrapped = false
+Interact_2.TextXAlignment = Enum.TextXAlignment.Center
+Interact_2.TextYAlignment = Enum.TextYAlignment.Center
+Interact_2.TextScaled = false
+Interact_2.LineHeight = 1
+Interact_2.MaxVisibleGraphemes = -1
+Interact_2.RichText = false
+Interact_2.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Interact_2.TextStrokeTransparency = 1
+Interact_2.TextTruncate = Enum.TextTruncate.None
+Interact_2.TextTransparency = 1
+Interact_2.TextDirection = Enum.TextDirection.Auto
+
+Title_3.Parent = linestoggle
+Title_3.Name = 'Title'
+Title_3.Size = UDim2.new(0, 385, 0, 14)
+Title_3.Position = UDim2.new(1, -63, 0.5, 0)
+Title_3.AnchorPoint = Vector2.new(1, 0.5)
+Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.BackgroundTransparency = 1
+Title_3.BorderSizePixel = 0
+Title_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Title_3.Visible = true
+Title_3.ZIndex = 1
+Title_3.LayoutOrder = 0
+Title_3.TextSize = 14
+Title_3.Active = false
+Title_3.Interactable = true
+Title_3.Rotation = 0
+Title_3.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Title_3.ClipsDescendants = false
+Title_3.Text = 'Line esp'
+Title_3.TextSize = 14
+Title_3.Font = Enum.Font.GothamMedium
+Title_3.TextColor3 = Color3.fromRGB(240, 240, 240)
+Title_3.TextWrapped = true
+Title_3.TextXAlignment = Enum.TextXAlignment.Left
+Title_3.TextYAlignment = Enum.TextYAlignment.Center
+Title_3.TextScaled = true
+Title_3.LineHeight = 1
+Title_3.MaxVisibleGraphemes = -1
+Title_3.RichText = false
+Title_3.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Title_3.TextStrokeTransparency = 1
+Title_3.TextTruncate = Enum.TextTruncate.None
+Title_3.TextTransparency = 0
+Title_3.TextDirection = Enum.TextDirection.Auto
+
+Speedtoggle.Parent = list
+Speedtoggle.Name = 'Speed-toggle'
+Speedtoggle.Size = UDim2.new(0, 465, 0, 40)
+Speedtoggle.Position = UDim2.new(0.10593220591545105, 0, 0, 0)
+Speedtoggle.AnchorPoint = Vector2.new(0, 0)
+Speedtoggle.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Speedtoggle.BackgroundTransparency = 0
+Speedtoggle.BorderSizePixel = 0
+Speedtoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Speedtoggle.Visible = true
+Speedtoggle.ZIndex = 1
+Speedtoggle.LayoutOrder = 0
+Speedtoggle.Active = false
+Speedtoggle.Interactable = true
+Speedtoggle.Rotation = 0
+Speedtoggle.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Speedtoggle.ClipsDescendants = false
+
+UIStroke_11.Parent = Speedtoggle
+UIStroke_11.Color = Color3.fromRGB(50, 50, 50)
+UIStroke_11.Transparency = 0
+UIStroke_11.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke_11.Thickness = 1
+UIStroke_11.LineJoinMode = Enum.LineJoinMode.Round
+
+UICorner_19.Parent = Speedtoggle
+UICorner_19.CornerRadius = UDim.new(0, 4)
+
+Lock_3.Parent = Speedtoggle
+Lock_3.Name = 'Lock'
+Lock_3.Size = UDim2.new(1, 0, 1, 0)
+Lock_3.Position = UDim2.new(1, 0, 0, 0)
+Lock_3.AnchorPoint = Vector2.new(1, 0)
+Lock_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Lock_3.BackgroundTransparency = 1
+Lock_3.BorderSizePixel = 0
+Lock_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Lock_3.Visible = true
+Lock_3.ZIndex = 5
+Lock_3.LayoutOrder = 0
+Lock_3.Active = false
+Lock_3.Interactable = true
+Lock_3.Rotation = 0
+Lock_3.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Lock_3.ClipsDescendants = false
+
+UIGradient_3.Parent = Lock_3
+UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient_3.Rotation = 0
+UIGradient_3.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 0.32), NumberSequenceKeypoint.new(0.50, 0.10), NumberSequenceKeypoint.new(1.00, 0.32)}
+UIGradient_3.Offset = Vector2.new(0, 0)
+
+UICorner_20.Parent = Lock_3
+UICorner_20.CornerRadius = UDim.new(0, 4)
+
+Reason_3.Parent = Lock_3
+Reason_3.Name = 'Reason'
+Reason_3.Size = UDim2.new(0, 0, 1, 0)
+Reason_3.Position = UDim2.new(0.5, 0, 0.5, 0)
+Reason_3.AnchorPoint = Vector2.new(0.5, 0.5)
+Reason_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Reason_3.BackgroundTransparency = 1
+Reason_3.BorderSizePixel = 0
+Reason_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Reason_3.Visible = true
+Reason_3.ZIndex = 5
+Reason_3.LayoutOrder = 0
+Reason_3.TextSize = 13
+Reason_3.Active = false
+Reason_3.Interactable = true
+Reason_3.Rotation = 0
+Reason_3.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Reason_3.ClipsDescendants = false
+Reason_3.Text = 'Locked Reason'
+Reason_3.TextSize = 13
+Reason_3.Font = Enum.Font.GothamMedium
+Reason_3.TextColor3 = Color3.fromRGB(175, 175, 175)
+Reason_3.TextWrapped = false
+Reason_3.TextXAlignment = Enum.TextXAlignment.Center
+Reason_3.TextYAlignment = Enum.TextYAlignment.Center
+Reason_3.TextScaled = false
+Reason_3.LineHeight = 1
+Reason_3.MaxVisibleGraphemes = -1
+Reason_3.RichText = false
+Reason_3.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Reason_3.TextStrokeTransparency = 1
+Reason_3.TextTruncate = Enum.TextTruncate.None
+Reason_3.TextTransparency = 1
+Reason_3.TextDirection = Enum.TextDirection.Auto
+
+Icon_3.Parent = Reason_3
+Icon_3.Name = 'Icon'
+Icon_3.Size = UDim2.new(0, 16, 0, 16)
+Icon_3.Position = UDim2.new(1, 20, 0.5, 0)
+Icon_3.AnchorPoint = Vector2.new(0, 0.5)
+Icon_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon_3.BackgroundTransparency = 1
+Icon_3.BorderSizePixel = 0
+Icon_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Icon_3.Visible = true
+Icon_3.ZIndex = 5
+Icon_3.LayoutOrder = 0
+Icon_3.Active = false
+Icon_3.Interactable = true
+Icon_3.Rotation = 0
+Icon_3.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Icon_3.ClipsDescendants = false
+Icon_3.Image = 'rbxassetid://5743022869'
+Icon_3.ImageColor3 = Color3.fromRGB(175, 175, 175)
+Icon_3.ScaleType = Enum.ScaleType.Stretch
+Icon_3.ResampleMode = Enum.ResamplerMode.Default
+Icon_3.ImageTransparency = 1
+Icon_3.ImageRectSize = Vector2.new(0, 0)
+Icon_3.ImageRectOffset = Vector2.new(0, 0)
+
+Switch_3.Parent = Speedtoggle
+Switch_3.Name = 'Switch'
+Switch_3.Size = UDim2.new(0, 43, 0, 21)
+Switch_3.Position = UDim2.new(1, -10, 0, 20)
+Switch_3.AnchorPoint = Vector2.new(1, 0.5)
+Switch_3.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Switch_3.BackgroundTransparency = 0
+Switch_3.BorderSizePixel = 0
+Switch_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Switch_3.Visible = true
+Switch_3.ZIndex = 1
+Switch_3.LayoutOrder = 0
+Switch_3.Active = false
+Switch_3.Interactable = true
+Switch_3.Rotation = 0
+Switch_3.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Switch_3.ClipsDescendants = false
+
+UICorner_21.Parent = Switch_3
+UICorner_21.CornerRadius = UDim.new(0, 15)
+
+UIStroke_12.Parent = Switch_3
+UIStroke_12.Color = Color3.fromRGB(65, 65, 65)
+UIStroke_12.Transparency = 0
+UIStroke_12.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke_12.Thickness = 1
+UIStroke_12.LineJoinMode = Enum.LineJoinMode.Round
+
+Shadow_4.Parent = Switch_3
+Shadow_4.Name = 'Shadow'
+Shadow_4.Size = UDim2.new(1, 2, 1, 2)
+Shadow_4.Position = UDim2.new(0.5, 0, 0.5, 0)
+Shadow_4.AnchorPoint = Vector2.new(0.5, 0.5)
+Shadow_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shadow_4.BackgroundTransparency = 1
+Shadow_4.BorderSizePixel = 0
+Shadow_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Shadow_4.Visible = true
+Shadow_4.ZIndex = 3
+Shadow_4.LayoutOrder = 0
+Shadow_4.Active = false
+Shadow_4.Interactable = true
+Shadow_4.Rotation = 0
+Shadow_4.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Shadow_4.ClipsDescendants = false
+Shadow_4.Image = 'rbxassetid://3602733521'
+Shadow_4.ImageColor3 = Color3.fromRGB(20, 20, 20)
+Shadow_4.ScaleType = Enum.ScaleType.Stretch
+Shadow_4.ResampleMode = Enum.ResamplerMode.Default
+Shadow_4.ImageTransparency = 0.6000000238418579
+Shadow_4.ImageRectSize = Vector2.new(0, 0)
+Shadow_4.ImageRectOffset = Vector2.new(0, 0)
+
+UICorner_22.Parent = Shadow_4
+UICorner_22.CornerRadius = UDim.new(0, 15)
+
+Indicator_3.Parent = Switch_3
+Indicator_3.Name = 'Indicator'
+Indicator_3.Size = UDim2.new(0, 17, 0, 17)
+Indicator_3.Position = UDim2.new(1, -40, 0.5, 0)
+Indicator_3.AnchorPoint = Vector2.new(0, 0.5)
+Indicator_3.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+Indicator_3.BackgroundTransparency = 0
+Indicator_3.BorderSizePixel = 0
+Indicator_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Indicator_3.Visible = true
+Indicator_3.ZIndex = 1
+Indicator_3.LayoutOrder = 0
+Indicator_3.Active = false
+Indicator_3.Interactable = true
+Indicator_3.Rotation = 0
+Indicator_3.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Indicator_3.ClipsDescendants = false
+
+UICorner_23.Parent = Indicator_3
+UICorner_23.CornerRadius = UDim.new(1, 0)
+
+UIStroke_13.Parent = Indicator_3
+UIStroke_13.Color = Color3.fromRGB(125, 125, 125)
+UIStroke_13.Transparency = 0
+UIStroke_13.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke_13.Thickness = 1.2000000476837158
+UIStroke_13.LineJoinMode = Enum.LineJoinMode.Round
+
+Interact_3.Parent = Speedtoggle
+Interact_3.Name = 'Interact'
+Interact_3.Size = UDim2.new(1, 0, 1, 0)
+Interact_3.Position = UDim2.new(0.5, 0, 0.5, 0)
+Interact_3.AnchorPoint = Vector2.new(0.5, 0.5)
+Interact_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Interact_3.BackgroundTransparency = 1
+Interact_3.BorderSizePixel = 0
+Interact_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Interact_3.Visible = true
+Interact_3.ZIndex = 5
+Interact_3.LayoutOrder = 0
+Interact_3.TextSize = 14
+Interact_3.Active = true
+Interact_3.Interactable = true
+Interact_3.Rotation = 0
+Interact_3.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Interact_3.ClipsDescendants = false
+Interact_3.Text = ''
+Interact_3.TextSize = 14
+Interact_3.Font = Enum.Font.SourceSans
+Interact_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Interact_3.TextWrapped = false
+Interact_3.TextXAlignment = Enum.TextXAlignment.Center
+Interact_3.TextYAlignment = Enum.TextYAlignment.Center
+Interact_3.TextScaled = false
+Interact_3.LineHeight = 1
+Interact_3.MaxVisibleGraphemes = -1
+Interact_3.RichText = false
+Interact_3.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Interact_3.TextStrokeTransparency = 1
+Interact_3.TextTruncate = Enum.TextTruncate.None
+Interact_3.TextTransparency = 1
+Interact_3.TextDirection = Enum.TextDirection.Auto
+
+Title_4.Parent = Speedtoggle
+Title_4.Name = 'Title'
+Title_4.Size = UDim2.new(0, 385, 0, 14)
+Title_4.Position = UDim2.new(1, -63, 0.5, 0)
+Title_4.AnchorPoint = Vector2.new(1, 0.5)
+Title_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_4.BackgroundTransparency = 1
+Title_4.BorderSizePixel = 0
+Title_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Title_4.Visible = true
+Title_4.ZIndex = 1
+Title_4.LayoutOrder = 0
+Title_4.TextSize = 14
+Title_4.Active = false
+Title_4.Interactable = true
+Title_4.Rotation = 0
+Title_4.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Title_4.ClipsDescendants = false
+Title_4.Text = 'Speed toggle'
+Title_4.TextSize = 14
+Title_4.Font = Enum.Font.GothamMedium
+Title_4.TextColor3 = Color3.fromRGB(240, 240, 240)
+Title_4.TextWrapped = true
+Title_4.TextXAlignment = Enum.TextXAlignment.Left
+Title_4.TextYAlignment = Enum.TextYAlignment.Center
+Title_4.TextScaled = true
+Title_4.LineHeight = 1
+Title_4.MaxVisibleGraphemes = -1
+Title_4.RichText = false
+Title_4.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Title_4.TextStrokeTransparency = 1
+Title_4.TextTruncate = Enum.TextTruncate.None
+Title_4.TextTransparency = 0
+Title_4.TextDirection = Enum.TextDirection.Auto
+
+Input.Parent = list
+Input.Name = 'Input'
+Input.Size = UDim2.new(0, 465, 0, 40)
+Input.Position = UDim2.new(0.010526316240429878, 0, 0.669211208820343, 0)
+Input.AnchorPoint = Vector2.new(0, 0)
+Input.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Input.BackgroundTransparency = 0
+Input.BorderSizePixel = 0
+Input.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Input.Visible = true
+Input.ZIndex = 1
+Input.LayoutOrder = 1
+Input.Active = false
+Input.Interactable = true
+Input.Rotation = 0
+Input.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Input.ClipsDescendants = true
+
+UICorner_24.Parent = Input
+UICorner_24.CornerRadius = UDim.new(0, 4)
+
+Title_5.Parent = Input
+Title_5.Name = 'Title'
+Title_5.Size = UDim2.new(0, 200, 0, 14)
+Title_5.Position = UDim2.new(0, 115, 0.5, 0)
+Title_5.AnchorPoint = Vector2.new(0.5, 0.5)
+Title_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_5.BackgroundTransparency = 1
+Title_5.BorderSizePixel = 0
+Title_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Title_5.Visible = true
+Title_5.ZIndex = 1
+Title_5.LayoutOrder = 0
+Title_5.TextSize = 14
+Title_5.Active = false
+Title_5.Interactable = true
+Title_5.Rotation = 0
+Title_5.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Title_5.ClipsDescendants = false
+Title_5.Text = 'Speed Value'
+Title_5.TextSize = 14
+Title_5.Font = Enum.Font.GothamMedium
+Title_5.TextColor3 = Color3.fromRGB(240, 240, 240)
+Title_5.TextWrapped = true
+Title_5.TextXAlignment = Enum.TextXAlignment.Left
+Title_5.TextYAlignment = Enum.TextYAlignment.Center
+Title_5.TextScaled = true
+Title_5.LineHeight = 1
+Title_5.MaxVisibleGraphemes = -1
+Title_5.RichText = false
+Title_5.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Title_5.TextStrokeTransparency = 1
+Title_5.TextTruncate = Enum.TextTruncate.None
+Title_5.TextTransparency = 0
+Title_5.TextDirection = Enum.TextDirection.Auto
+
+UIStroke_14.Parent = Input
+UIStroke_14.Color = Color3.fromRGB(50, 50, 50)
+UIStroke_14.Transparency = 0
+UIStroke_14.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke_14.Thickness = 1
+UIStroke_14.LineJoinMode = Enum.LineJoinMode.Round
+
+InputFrame.Parent = Input
+InputFrame.Name = 'InputFrame'
+InputFrame.Size = UDim2.new(0, 120, 0, 30)
+InputFrame.Position = UDim2.new(0, 458, 0, 20)
+InputFrame.AnchorPoint = Vector2.new(1, 0.5)
+InputFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+InputFrame.BackgroundTransparency = 0
+InputFrame.BorderSizePixel = 0
+InputFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+InputFrame.Visible = true
+InputFrame.ZIndex = 1
+InputFrame.LayoutOrder = 0
+InputFrame.Active = false
+InputFrame.Interactable = true
+InputFrame.Rotation = 0
+InputFrame.SizeConstraint = Enum.SizeConstraint.RelativeXY
+InputFrame.ClipsDescendants = false
+
+InputBox.Parent = InputFrame
+InputBox.Name = 'InputBox'
+InputBox.Size = UDim2.new(1, -15, 0, 14)
+InputBox.Position = UDim2.new(0.5, 0, 0.5, 0)
+InputBox.AnchorPoint = Vector2.new(0.5, 0.5)
+InputBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+InputBox.BackgroundTransparency = 1
+InputBox.BorderSizePixel = 0
+InputBox.BorderColor3 = Color3.fromRGB(27, 42, 53)
+InputBox.Visible = true
+InputBox.ZIndex = 1
+InputBox.LayoutOrder = 0
+InputBox.TextSize = 14
+InputBox.Active = true
+InputBox.Interactable = true
+InputBox.Rotation = 0
+InputBox.SizeConstraint = Enum.SizeConstraint.RelativeXY
+InputBox.ClipsDescendants = false
+
+UIStroke_15.Parent = InputFrame
+UIStroke_15.Color = Color3.fromRGB(65, 65, 65)
+UIStroke_15.Transparency = 0
+UIStroke_15.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke_15.Thickness = 1
+UIStroke_15.LineJoinMode = Enum.LineJoinMode.Round
+
+UICorner_25.Parent = InputFrame
+UICorner_25.CornerRadius = UDim.new(0, 5)
+
+Lock_4.Parent = Input
+Lock_4.Name = 'Lock'
+Lock_4.Size = UDim2.new(1, 0, 1, 0)
+Lock_4.Position = UDim2.new(1, 0, 0, 0)
+Lock_4.AnchorPoint = Vector2.new(1, 0)
+Lock_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Lock_4.BackgroundTransparency = 1
+Lock_4.BorderSizePixel = 0
+Lock_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Lock_4.Visible = true
+Lock_4.ZIndex = 5
+Lock_4.LayoutOrder = 0
+Lock_4.Active = false
+Lock_4.Interactable = true
+Lock_4.Rotation = 0
+Lock_4.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Lock_4.ClipsDescendants = false
+
+UIGradient_4.Parent = Lock_4
+UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient_4.Rotation = 0
+UIGradient_4.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 0.32), NumberSequenceKeypoint.new(0.50, 0.10), NumberSequenceKeypoint.new(1.00, 0.32)}
+UIGradient_4.Offset = Vector2.new(0, 0)
+
+UICorner_26.Parent = Lock_4
+UICorner_26.CornerRadius = UDim.new(0, 4)
+
+Reason_4.Parent = Lock_4
+Reason_4.Name = 'Reason'
+Reason_4.Size = UDim2.new(0, 0, 1, 0)
+Reason_4.Position = UDim2.new(0.5, 0, 0.5, 0)
+Reason_4.AnchorPoint = Vector2.new(0.5, 0.5)
+Reason_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Reason_4.BackgroundTransparency = 1
+Reason_4.BorderSizePixel = 0
+Reason_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Reason_4.Visible = true
+Reason_4.ZIndex = 5
+Reason_4.LayoutOrder = 0
+Reason_4.TextSize = 13
+Reason_4.Active = false
+Reason_4.Interactable = true
+Reason_4.Rotation = 0
+Reason_4.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Reason_4.ClipsDescendants = false
+Reason_4.Text = 'Locked Reason'
+Reason_4.TextSize = 13
+Reason_4.Font = Enum.Font.GothamMedium
+Reason_4.TextColor3 = Color3.fromRGB(175, 175, 175)
+Reason_4.TextWrapped = false
+Reason_4.TextXAlignment = Enum.TextXAlignment.Center
+Reason_4.TextYAlignment = Enum.TextYAlignment.Center
+Reason_4.TextScaled = false
+Reason_4.LineHeight = 1
+Reason_4.MaxVisibleGraphemes = -1
+Reason_4.RichText = false
+Reason_4.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Reason_4.TextStrokeTransparency = 1
+Reason_4.TextTruncate = Enum.TextTruncate.None
+Reason_4.TextTransparency = 1
+Reason_4.TextDirection = Enum.TextDirection.Auto
+
+Icon_4.Parent = Reason_4
+Icon_4.Name = 'Icon'
+Icon_4.Size = UDim2.new(0, 16, 0, 16)
+Icon_4.Position = UDim2.new(1, 20, 0.5, 0)
+Icon_4.AnchorPoint = Vector2.new(0, 0.5)
+Icon_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon_4.BackgroundTransparency = 1
+Icon_4.BorderSizePixel = 0
+Icon_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Icon_4.Visible = true
+Icon_4.ZIndex = 5
+Icon_4.LayoutOrder = 0
+Icon_4.Active = false
+Icon_4.Interactable = true
+Icon_4.Rotation = 0
+Icon_4.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Icon_4.ClipsDescendants = false
+Icon_4.Image = 'rbxassetid://5743022869'
+Icon_4.ImageColor3 = Color3.fromRGB(175, 175, 175)
+Icon_4.ScaleType = Enum.ScaleType.Stretch
+Icon_4.ResampleMode = Enum.ResamplerMode.Default
+Icon_4.ImageTransparency = 1
+Icon_4.ImageRectSize = Vector2.new(0, 0)
+Icon_4.ImageRectOffset = Vector2.new(0, 0)
+
+Lines.Parent = m0th
+
+Box.Parent = m0th
+
+
+-- Scripts:
+
