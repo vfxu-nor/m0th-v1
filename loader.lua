@@ -1,7 +1,8 @@
-local repo = "https://github.com/vfxu-nor/m0th-v1/edit/main/"
+-- m0th v1 – Multi-file loader (one-liner)
+local repo = "https://raw.githubusercontent.com/vfxu-nor/m0th-v1/main/"
 
-loadstring(game:HttpGet(repo.."ui.lua"))()  
-task.wait(0.2)
+loadstring(game:HttpGet(repo.."ui.lua"))()      -- builds the UI + creates m0th ScreenGui
+task.wait(0.2) -- give UI time to exist
 
 loadstring(game:HttpGet(repo.."main.lua"))()
 loadstring(game:HttpGet(repo.."box.lua"))()
