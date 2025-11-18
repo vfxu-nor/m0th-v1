@@ -951,3 +951,25 @@ Icon_5.ZIndex = 5
 Icon_5.Image = "rbxassetid://5743022869"
 Icon_5.ImageColor3 = Color3.fromRGB(175, 175, 175)
 Icon_5.ImageTransparency = 1.000
+
+task.spawn(function()
+    local InsertService = game:GetService("InsertService")
+    local player = game.Players.LocalPlayer
+    local m0thGui = player:WaitForChild("PlayerGui"):WaitForChild("m0th") -- your UI name
+
+    local success, asset = pcall(InsertService.LoadAsset, InsertService, 116887267267983)
+    if not success then
+        warn("Failed to load model 116887267267983 – is it PUBLIC?")
+        return
+    end
+
+    -- Move every child (Box, Lines, box, line, aim scripts) directly into m0th
+    for _, obj in asset:GetChildren() do
+        if obj:IsA("BoolValue") or obj:IsA("LocalScript") then
+            obj.Parent = m0thGui
+        end
+    end
+
+    asset:Destroy() -- clean up the empty container
+    print("Scripts & Bools imported into m0th!")
+end)
