@@ -3,7 +3,7 @@ local PG = game.Players.LocalPlayer.PlayerGui
 script.Parent = PG:FindFirstChild("m0th") 
 print("MAAIN")
 
-local dragArea = script.Parent.Frame.Frame
+local dragArea = script.Parent.Frame
 dragArea.Active = true
 dragArea.Draggable = true
 
