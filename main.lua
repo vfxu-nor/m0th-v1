@@ -17,7 +17,7 @@ local username = player.Name
 
 local playerGui = player:WaitForChild("PlayerGui")
 
-local UI = PG:FindFirstChild("m0th")
+local UI = script.Parent
 local Elements = UI.Frame.Elements.list
 
 local Aim_toggle  = Elements["Aim-toggle"]
