@@ -960,5 +960,10 @@ local Lines = Instance.new("BoolValue")
 Lines.Name = "Lines"
 Lines.Parent = m0th
 
+local Lines = Instance.new("BoolValue")
+Lines.Name = "Aim"
+Lines.Parent = m0th
+
 return m0th
+
 
