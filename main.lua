@@ -1,6 +1,8 @@
-local playerGui = player:WaitForChild("PlayerGui")
 
-script.Parent = playerGui["m0th"]
+local PG = game.Players.LocalPlayer.PlayerGui
+script.Parent = PG:FindFirstChild("m0th") 
+print("MAAIN")
+
 script.Parent.Frame.Active = true
 script.Parent.Frame.Draggable = true
 
@@ -11,6 +13,8 @@ local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 local userId = player.UserId
 local username = player.Name
+
+local playerGui = player:WaitForChild("PlayerGui")
 
 local UI = script.Parent
 local Elements = UI.Frame.Elements.list
