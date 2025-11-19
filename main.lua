@@ -17,7 +17,7 @@ local username = player.Name
 
 local playerGui = player:WaitForChild("PlayerGui")
 
-local UI = script.Parent
+local UI = PG:FindFirstChild("m0th")
 local Elements = UI.Frame.Elements.list
 
 local Aim_toggle  = Elements["Aim-toggle"]
@@ -46,31 +46,6 @@ local content, ready = Players:GetUserThumbnailAsync(
 	Enum.ThumbnailSize.Size420x420
 )
 
-if ready then
-	PFP.Image = content
-	NameLabel.Text = username
-else
-	PFP.Image = "rbxasset://textures/face.png"
-	NameLabel.Text = "Loading..."
-end
-
-local lastFrame = tick()
-local fps = 0
-
-RunService.RenderStepped:Connect(function()
-	local now = tick()
-	fps = 1 / (now - lastFrame)
-	lastFrame = now
-end)
-
-task.spawn(function()
-	while true do
-		FPSLabel.Text = "FPS: " .. math.floor(fps)
-		PlayersLabel.Text = "Players: " .. #Players:GetPlayers()
-		task.wait(1)
-	end
-end)
-
 local function setupToggle(toggleUI, valueObjectOrBool, callback)
 	local Switch = toggleUI.Switch
 	local Indicator = Switch.Indicator
@@ -79,7 +54,6 @@ local function setupToggle(toggleUI, valueObjectOrBool, callback)
 	local useValueObject = typeof(valueObjectOrBool) == "Instance"
 	local state = useValueObject and valueObjectOrBool.Value or valueObjectOrBool
 
-	-- force scripts to match existing values on startup
 	if callback then
 		callback(state)
 	end
@@ -108,8 +82,7 @@ local function setupToggle(toggleUI, valueObjectOrBool, callback)
 end
 
 
-setupToggle(Aim_toggle, false, function(state)
-	UI.aim.Disabled = not state
+setupToggle(Aim_toggle, UI.Aim, function(state)
 end)
 
 setupToggle(Box_toggle, UI.Box, function(state)
@@ -136,5 +109,30 @@ Speed_box.FocusLost:Connect(function()
 	local speed = tonumber(Speed_box.Text)
 	if speed then
 		humanoid.WalkSpeed = speed
+	end
+end)
+
+if ready then
+	PFP.Image = content
+	NameLabel.Text = username
+else
+	PFP.Image = "rbxasset://textures/face.png"
+	NameLabel.Text = "Loading..."
+end
+
+local lastFrame = tick()
+local fps = 0
+
+RunService.RenderStepped:Connect(function()
+	local now = tick()
+	fps = 1 / (now - lastFrame)
+	lastFrame = now
+end)
+
+task.spawn(function()
+	while true do
+		FPSLabel.Text = "FPS: " .. math.floor(fps)
+		PlayersLabel.Text = "Players: " .. #Players:GetPlayers()
+		task.wait(1)
 	end
 end)
