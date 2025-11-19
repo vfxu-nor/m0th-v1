@@ -1,3 +1,8 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local m0th = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Frame_2 = Instance.new("Frame")
@@ -1426,8 +1431,3 @@ Spinner_Vert.Parent = m0th
 
 
 return m0th
-
-
-
-
-
