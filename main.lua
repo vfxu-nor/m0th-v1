@@ -1,6 +1,6 @@
 local playerGui = player:WaitForChild("PlayerGui")
 
-script.Parent = playerGui.m0th
+script.Parent = playerGui["m0th"]
 script.Parent.Frame.Active = true
 script.Parent.Frame.Draggable = true
 
