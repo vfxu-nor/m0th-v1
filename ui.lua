@@ -972,12 +972,13 @@ local Spinner_Vert = Instance.new("BoolValue")
 Spinner_Vert.Name = "Spinner-Vert"
 Spinner_Vert.Parent = m0th
 
-local Spinner_Horiz-Vert = Instance.new("BoolValue")
+local Spinner_Horiz = Instance.new("BoolValue")
 Spinner_Horiz.Name = "Spinner-Horiz"
 Spinner_Vert.Parent = m0th
 
 
 return m0th
+
 
 
 
