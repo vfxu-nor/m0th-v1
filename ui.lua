@@ -146,7 +146,7 @@ Shadow.BorderColor3 = Color3.fromRGB(27, 42, 53)
 Shadow.BorderSizePixel = 0
 Shadow.Position = UDim2.new(0.5, 0, 0.5, 0)
 Shadow.Size = UDim2.new(1, 35, 1, 35)
-Shadow.ZIndex = 10
+Shadow.ZIndex = -3
 
 Image.Name = "Image"
 Image.Parent = Shadow
@@ -961,3 +961,4 @@ Lines.Name = "Lines"
 Lines.Parent = m0th
 
 return m0th
+
