@@ -1,3 +1,7 @@
+local PG = game.Players.LocalPlayer.PlayerGui
+script.Parent = PG:FindFirstChild("m0th") 
+print("BOX")
+
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local Box = script.Parent.Box
