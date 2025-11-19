@@ -1,8 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local m0th = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Frame_2 = Instance.new("Frame")
@@ -97,6 +92,51 @@ local UIGradient_5 = Instance.new("UIGradient")
 local UICorner_27 = Instance.new("UICorner")
 local Reason_5 = Instance.new("TextLabel")
 local Icon_5 = Instance.new("ImageLabel")
+local Spinerverticaltoggle = Instance.new("Frame")
+local UICorner_28 = Instance.new("UICorner")
+local Lock_6 = Instance.new("Frame")
+local UIGradient_6 = Instance.new("UIGradient")
+local UICorner_29 = Instance.new("UICorner")
+local Reason_6 = Instance.new("TextLabel")
+local Icon_6 = Instance.new("ImageLabel")
+local Switch_5 = Instance.new("Frame")
+local UICorner_30 = Instance.new("UICorner")
+local Shadow_6 = Instance.new("ImageLabel")
+local UICorner_31 = Instance.new("UICorner")
+local Indicator_5 = Instance.new("Frame")
+local UICorner_32 = Instance.new("UICorner")
+local Interact_5 = Instance.new("TextButton")
+local Title_7 = Instance.new("TextLabel")
+local Spinerhorizontaltoggle = Instance.new("Frame")
+local UICorner_33 = Instance.new("UICorner")
+local Lock_7 = Instance.new("Frame")
+local UIGradient_7 = Instance.new("UIGradient")
+local UICorner_34 = Instance.new("UICorner")
+local Reason_7 = Instance.new("TextLabel")
+local Icon_7 = Instance.new("ImageLabel")
+local Switch_6 = Instance.new("Frame")
+local UICorner_35 = Instance.new("UICorner")
+local Shadow_7 = Instance.new("ImageLabel")
+local UICorner_36 = Instance.new("UICorner")
+local Indicator_6 = Instance.new("Frame")
+local UICorner_37 = Instance.new("UICorner")
+local Interact_6 = Instance.new("TextButton")
+local Title_8 = Instance.new("TextLabel")
+local flytoggle = Instance.new("Frame")
+local UICorner_38 = Instance.new("UICorner")
+local Lock_8 = Instance.new("Frame")
+local UIGradient_8 = Instance.new("UIGradient")
+local UICorner_39 = Instance.new("UICorner")
+local Reason_8 = Instance.new("TextLabel")
+local Icon_8 = Instance.new("ImageLabel")
+local Switch_7 = Instance.new("Frame")
+local UICorner_40 = Instance.new("UICorner")
+local Shadow_8 = Instance.new("ImageLabel")
+local UICorner_41 = Instance.new("UICorner")
+local Indicator_7 = Instance.new("Frame")
+local UICorner_42 = Instance.new("UICorner")
+local Interact_7 = Instance.new("TextButton")
+local Title_9 = Instance.new("TextLabel")
 
 --Properties:
 
@@ -306,6 +346,7 @@ Aimtoggle.Parent = list
 Aimtoggle.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 Aimtoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Aimtoggle.BorderSizePixel = 0
+Aimtoggle.LayoutOrder = 1
 Aimtoggle.Position = UDim2.new(0.105932206, 0, 0, 0)
 Aimtoggle.Size = UDim2.new(0, 465, 0, 40)
 
@@ -456,8 +497,10 @@ boxtoggle.Parent = list
 boxtoggle.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 boxtoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
 boxtoggle.BorderSizePixel = 0
+boxtoggle.LayoutOrder = 2
 boxtoggle.Position = UDim2.new(0.105932206, 0, 0, 0)
 boxtoggle.Size = UDim2.new(0, 465, 0, 40)
+boxtoggle.ZIndex = 2
 
 UICorner_10.CornerRadius = UDim.new(0, 4)
 UICorner_10.Parent = boxtoggle
@@ -590,6 +633,7 @@ linestoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
 linestoggle.BorderSizePixel = 0
 linestoggle.Position = UDim2.new(0.105932206, 0, 0, 0)
 linestoggle.Size = UDim2.new(0, 465, 0, 40)
+linestoggle.ZIndex = 3
 
 UICorner_15.CornerRadius = UDim.new(0, 4)
 UICorner_15.Parent = linestoggle
@@ -720,8 +764,10 @@ Speedtoggle.Parent = list
 Speedtoggle.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 Speedtoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Speedtoggle.BorderSizePixel = 0
+Speedtoggle.LayoutOrder = 10
 Speedtoggle.Position = UDim2.new(0.105932206, 0, 0, 0)
 Speedtoggle.Size = UDim2.new(0, 465, 0, 40)
+Speedtoggle.ZIndex = 6
 
 UICorner_20.CornerRadius = UDim.new(0, 4)
 UICorner_20.Parent = Speedtoggle
@@ -853,7 +899,7 @@ Input.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 Input.BorderColor3 = Color3.fromRGB(27, 42, 53)
 Input.BorderSizePixel = 0
 Input.ClipsDescendants = true
-Input.LayoutOrder = 1
+Input.LayoutOrder = 11
 Input.Position = UDim2.new(0.0105263162, 0, 0.669211209, 0)
 Input.Size = UDim2.new(0, 465, 0, 40)
 
@@ -952,6 +998,408 @@ Icon_5.Image = "rbxassetid://5743022869"
 Icon_5.ImageColor3 = Color3.fromRGB(175, 175, 175)
 Icon_5.ImageTransparency = 1.000
 
+Spinerverticaltoggle.Name = "Spiner-vertical-toggle"
+Spinerverticaltoggle.Parent = list
+Spinerverticaltoggle.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Spinerverticaltoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Spinerverticaltoggle.BorderSizePixel = 0
+Spinerverticaltoggle.LayoutOrder = 4
+Spinerverticaltoggle.Position = UDim2.new(0.105932206, 0, 0, 0)
+Spinerverticaltoggle.Size = UDim2.new(0, 465, 0, 40)
+Spinerverticaltoggle.ZIndex = 4
+
+UICorner_28.CornerRadius = UDim.new(0, 4)
+UICorner_28.Parent = Spinerverticaltoggle
+
+Lock_6.Name = "Lock"
+Lock_6.Parent = Spinerverticaltoggle
+Lock_6.AnchorPoint = Vector2.new(1, 0)
+Lock_6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Lock_6.BackgroundTransparency = 1.000
+Lock_6.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Lock_6.BorderSizePixel = 0
+Lock_6.Position = UDim2.new(1, 0, 0, 0)
+Lock_6.Size = UDim2.new(1, 0, 1, 0)
+Lock_6.ZIndex = 5
+
+UIGradient_6.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 0.32), NumberSequenceKeypoint.new(0.50, 0.10), NumberSequenceKeypoint.new(1.00, 0.32)}
+UIGradient_6.Parent = Lock_6
+
+UICorner_29.CornerRadius = UDim.new(0, 4)
+UICorner_29.Parent = Lock_6
+
+Reason_6.Name = "Reason"
+Reason_6.Parent = Lock_6
+Reason_6.AnchorPoint = Vector2.new(0.5, 0.5)
+Reason_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Reason_6.BackgroundTransparency = 1.000
+Reason_6.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Reason_6.BorderSizePixel = 0
+Reason_6.Position = UDim2.new(0.5, 0, 0.5, 0)
+Reason_6.Size = UDim2.new(0, 0, 1, 0)
+Reason_6.ZIndex = 5
+Reason_6.Font = Enum.Font.GothamMedium
+Reason_6.Text = "Locked Reason"
+Reason_6.TextColor3 = Color3.fromRGB(175, 175, 175)
+Reason_6.TextSize = 13.000
+Reason_6.TextTransparency = 1.000
+
+Icon_6.Name = "Icon"
+Icon_6.Parent = Reason_6
+Icon_6.AnchorPoint = Vector2.new(0, 0.5)
+Icon_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon_6.BackgroundTransparency = 1.000
+Icon_6.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Icon_6.BorderSizePixel = 0
+Icon_6.Position = UDim2.new(1, 20, 0.5, 0)
+Icon_6.Size = UDim2.new(0, 16, 0, 16)
+Icon_6.ZIndex = 5
+Icon_6.Image = "rbxassetid://5743022869"
+Icon_6.ImageColor3 = Color3.fromRGB(175, 175, 175)
+Icon_6.ImageTransparency = 1.000
+
+Switch_5.Name = "Switch"
+Switch_5.Parent = Spinerverticaltoggle
+Switch_5.AnchorPoint = Vector2.new(1, 0.5)
+Switch_5.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Switch_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Switch_5.BorderSizePixel = 0
+Switch_5.Position = UDim2.new(1, -10, 0, 20)
+Switch_5.Size = UDim2.new(0, 43, 0, 21)
+
+UICorner_30.CornerRadius = UDim.new(0, 15)
+UICorner_30.Parent = Switch_5
+
+Shadow_6.Name = "Shadow"
+Shadow_6.Parent = Switch_5
+Shadow_6.AnchorPoint = Vector2.new(0.5, 0.5)
+Shadow_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shadow_6.BackgroundTransparency = 1.000
+Shadow_6.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Shadow_6.BorderSizePixel = 0
+Shadow_6.Position = UDim2.new(0.5, 0, 0.5, 0)
+Shadow_6.Size = UDim2.new(1, 2, 1, 2)
+Shadow_6.ZIndex = 3
+Shadow_6.Image = "rbxassetid://3602733521"
+Shadow_6.ImageColor3 = Color3.fromRGB(20, 20, 20)
+Shadow_6.ImageTransparency = 0.600
+
+UICorner_31.CornerRadius = UDim.new(0, 15)
+UICorner_31.Parent = Shadow_6
+
+Indicator_5.Name = "Indicator"
+Indicator_5.Parent = Switch_5
+Indicator_5.AnchorPoint = Vector2.new(0, 0.5)
+Indicator_5.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+Indicator_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Indicator_5.BorderSizePixel = 0
+Indicator_5.Position = UDim2.new(1, -40, 0.5, 0)
+Indicator_5.Size = UDim2.new(0, 17, 0, 17)
+
+UICorner_32.CornerRadius = UDim.new(1, 0)
+UICorner_32.Parent = Indicator_5
+
+Interact_5.Name = "Interact"
+Interact_5.Parent = Spinerverticaltoggle
+Interact_5.AnchorPoint = Vector2.new(0.5, 0.5)
+Interact_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Interact_5.BackgroundTransparency = 1.000
+Interact_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Interact_5.BorderSizePixel = 0
+Interact_5.Position = UDim2.new(0.5, 0, 0.5, 0)
+Interact_5.Size = UDim2.new(1, 0, 1, 0)
+Interact_5.ZIndex = 5
+Interact_5.Font = Enum.Font.SourceSans
+Interact_5.Text = ""
+Interact_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+Interact_5.TextSize = 14.000
+Interact_5.TextTransparency = 1.000
+
+Title_7.Name = "Title"
+Title_7.Parent = Spinerverticaltoggle
+Title_7.AnchorPoint = Vector2.new(1, 0.5)
+Title_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_7.BackgroundTransparency = 1.000
+Title_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Title_7.BorderSizePixel = 0
+Title_7.Position = UDim2.new(1, -63, 0.5, 0)
+Title_7.Size = UDim2.new(0, 385, 0, 14)
+Title_7.Font = Enum.Font.GothamMedium
+Title_7.Text = "Spinner Vertical"
+Title_7.TextColor3 = Color3.fromRGB(240, 240, 240)
+Title_7.TextScaled = true
+Title_7.TextSize = 14.000
+Title_7.TextWrapped = true
+Title_7.TextXAlignment = Enum.TextXAlignment.Left
+
+Spinerhorizontaltoggle.Name = "Spiner-horizontal-toggle"
+Spinerhorizontaltoggle.Parent = list
+Spinerhorizontaltoggle.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Spinerhorizontaltoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Spinerhorizontaltoggle.BorderSizePixel = 0
+Spinerhorizontaltoggle.LayoutOrder = 5
+Spinerhorizontaltoggle.Position = UDim2.new(0.105932206, 0, 0, 0)
+Spinerhorizontaltoggle.Size = UDim2.new(0, 465, 0, 40)
+Spinerhorizontaltoggle.ZIndex = 4
+
+UICorner_33.CornerRadius = UDim.new(0, 4)
+UICorner_33.Parent = Spinerhorizontaltoggle
+
+Lock_7.Name = "Lock"
+Lock_7.Parent = Spinerhorizontaltoggle
+Lock_7.AnchorPoint = Vector2.new(1, 0)
+Lock_7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Lock_7.BackgroundTransparency = 1.000
+Lock_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Lock_7.BorderSizePixel = 0
+Lock_7.Position = UDim2.new(1, 0, 0, 0)
+Lock_7.Size = UDim2.new(1, 0, 1, 0)
+Lock_7.ZIndex = 5
+
+UIGradient_7.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 0.32), NumberSequenceKeypoint.new(0.50, 0.10), NumberSequenceKeypoint.new(1.00, 0.32)}
+UIGradient_7.Parent = Lock_7
+
+UICorner_34.CornerRadius = UDim.new(0, 4)
+UICorner_34.Parent = Lock_7
+
+Reason_7.Name = "Reason"
+Reason_7.Parent = Lock_7
+Reason_7.AnchorPoint = Vector2.new(0.5, 0.5)
+Reason_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Reason_7.BackgroundTransparency = 1.000
+Reason_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Reason_7.BorderSizePixel = 0
+Reason_7.Position = UDim2.new(0.5, 0, 0.5, 0)
+Reason_7.Size = UDim2.new(0, 0, 1, 0)
+Reason_7.ZIndex = 5
+Reason_7.Font = Enum.Font.GothamMedium
+Reason_7.Text = "Locked Reason"
+Reason_7.TextColor3 = Color3.fromRGB(175, 175, 175)
+Reason_7.TextSize = 13.000
+Reason_7.TextTransparency = 1.000
+
+Icon_7.Name = "Icon"
+Icon_7.Parent = Reason_7
+Icon_7.AnchorPoint = Vector2.new(0, 0.5)
+Icon_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon_7.BackgroundTransparency = 1.000
+Icon_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Icon_7.BorderSizePixel = 0
+Icon_7.Position = UDim2.new(1, 20, 0.5, 0)
+Icon_7.Size = UDim2.new(0, 16, 0, 16)
+Icon_7.ZIndex = 5
+Icon_7.Image = "rbxassetid://5743022869"
+Icon_7.ImageColor3 = Color3.fromRGB(175, 175, 175)
+Icon_7.ImageTransparency = 1.000
+
+Switch_6.Name = "Switch"
+Switch_6.Parent = Spinerhorizontaltoggle
+Switch_6.AnchorPoint = Vector2.new(1, 0.5)
+Switch_6.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Switch_6.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Switch_6.BorderSizePixel = 0
+Switch_6.Position = UDim2.new(1, -10, 0, 20)
+Switch_6.Size = UDim2.new(0, 43, 0, 21)
+
+UICorner_35.CornerRadius = UDim.new(0, 15)
+UICorner_35.Parent = Switch_6
+
+Shadow_7.Name = "Shadow"
+Shadow_7.Parent = Switch_6
+Shadow_7.AnchorPoint = Vector2.new(0.5, 0.5)
+Shadow_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shadow_7.BackgroundTransparency = 1.000
+Shadow_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Shadow_7.BorderSizePixel = 0
+Shadow_7.Position = UDim2.new(0.5, 0, 0.5, 0)
+Shadow_7.Size = UDim2.new(1, 2, 1, 2)
+Shadow_7.ZIndex = 3
+Shadow_7.Image = "rbxassetid://3602733521"
+Shadow_7.ImageColor3 = Color3.fromRGB(20, 20, 20)
+Shadow_7.ImageTransparency = 0.600
+
+UICorner_36.CornerRadius = UDim.new(0, 15)
+UICorner_36.Parent = Shadow_7
+
+Indicator_6.Name = "Indicator"
+Indicator_6.Parent = Switch_6
+Indicator_6.AnchorPoint = Vector2.new(0, 0.5)
+Indicator_6.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+Indicator_6.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Indicator_6.BorderSizePixel = 0
+Indicator_6.Position = UDim2.new(1, -40, 0.5, 0)
+Indicator_6.Size = UDim2.new(0, 17, 0, 17)
+
+UICorner_37.CornerRadius = UDim.new(1, 0)
+UICorner_37.Parent = Indicator_6
+
+Interact_6.Name = "Interact"
+Interact_6.Parent = Spinerhorizontaltoggle
+Interact_6.AnchorPoint = Vector2.new(0.5, 0.5)
+Interact_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Interact_6.BackgroundTransparency = 1.000
+Interact_6.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Interact_6.BorderSizePixel = 0
+Interact_6.Position = UDim2.new(0.5, 0, 0.5, 0)
+Interact_6.Size = UDim2.new(1, 0, 1, 0)
+Interact_6.ZIndex = 5
+Interact_6.Font = Enum.Font.SourceSans
+Interact_6.Text = ""
+Interact_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+Interact_6.TextSize = 14.000
+Interact_6.TextTransparency = 1.000
+
+Title_8.Name = "Title"
+Title_8.Parent = Spinerhorizontaltoggle
+Title_8.AnchorPoint = Vector2.new(1, 0.5)
+Title_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_8.BackgroundTransparency = 1.000
+Title_8.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Title_8.BorderSizePixel = 0
+Title_8.Position = UDim2.new(1, -63, 0.5, 0)
+Title_8.Size = UDim2.new(0, 385, 0, 14)
+Title_8.Font = Enum.Font.GothamMedium
+Title_8.Text = "Spinner Horizontal"
+Title_8.TextColor3 = Color3.fromRGB(240, 240, 240)
+Title_8.TextScaled = true
+Title_8.TextSize = 14.000
+Title_8.TextWrapped = true
+Title_8.TextXAlignment = Enum.TextXAlignment.Left
+
+flytoggle.Name = "fly-toggle"
+flytoggle.Parent = list
+flytoggle.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+flytoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+flytoggle.BorderSizePixel = 0
+flytoggle.LayoutOrder = 6
+flytoggle.Position = UDim2.new(0.105932206, 0, 0, 0)
+flytoggle.Size = UDim2.new(0, 465, 0, 40)
+flytoggle.ZIndex = 4
+
+UICorner_38.CornerRadius = UDim.new(0, 4)
+UICorner_38.Parent = flytoggle
+
+Lock_8.Name = "Lock"
+Lock_8.Parent = flytoggle
+Lock_8.AnchorPoint = Vector2.new(1, 0)
+Lock_8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Lock_8.BackgroundTransparency = 1.000
+Lock_8.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Lock_8.BorderSizePixel = 0
+Lock_8.Position = UDim2.new(1, 0, 0, 0)
+Lock_8.Size = UDim2.new(1, 0, 1, 0)
+Lock_8.ZIndex = 5
+
+UIGradient_8.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 0.32), NumberSequenceKeypoint.new(0.50, 0.10), NumberSequenceKeypoint.new(1.00, 0.32)}
+UIGradient_8.Parent = Lock_8
+
+UICorner_39.CornerRadius = UDim.new(0, 4)
+UICorner_39.Parent = Lock_8
+
+Reason_8.Name = "Reason"
+Reason_8.Parent = Lock_8
+Reason_8.AnchorPoint = Vector2.new(0.5, 0.5)
+Reason_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Reason_8.BackgroundTransparency = 1.000
+Reason_8.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Reason_8.BorderSizePixel = 0
+Reason_8.Position = UDim2.new(0.5, 0, 0.5, 0)
+Reason_8.Size = UDim2.new(0, 0, 1, 0)
+Reason_8.ZIndex = 5
+Reason_8.Font = Enum.Font.GothamMedium
+Reason_8.Text = "Locked Reason"
+Reason_8.TextColor3 = Color3.fromRGB(175, 175, 175)
+Reason_8.TextSize = 13.000
+Reason_8.TextTransparency = 1.000
+
+Icon_8.Name = "Icon"
+Icon_8.Parent = Reason_8
+Icon_8.AnchorPoint = Vector2.new(0, 0.5)
+Icon_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon_8.BackgroundTransparency = 1.000
+Icon_8.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Icon_8.BorderSizePixel = 0
+Icon_8.Position = UDim2.new(1, 20, 0.5, 0)
+Icon_8.Size = UDim2.new(0, 16, 0, 16)
+Icon_8.ZIndex = 5
+Icon_8.Image = "rbxassetid://5743022869"
+Icon_8.ImageColor3 = Color3.fromRGB(175, 175, 175)
+Icon_8.ImageTransparency = 1.000
+
+Switch_7.Name = "Switch"
+Switch_7.Parent = flytoggle
+Switch_7.AnchorPoint = Vector2.new(1, 0.5)
+Switch_7.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Switch_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Switch_7.BorderSizePixel = 0
+Switch_7.Position = UDim2.new(1, -10, 0, 20)
+Switch_7.Size = UDim2.new(0, 43, 0, 21)
+
+UICorner_40.CornerRadius = UDim.new(0, 15)
+UICorner_40.Parent = Switch_7
+
+Shadow_8.Name = "Shadow"
+Shadow_8.Parent = Switch_7
+Shadow_8.AnchorPoint = Vector2.new(0.5, 0.5)
+Shadow_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shadow_8.BackgroundTransparency = 1.000
+Shadow_8.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Shadow_8.BorderSizePixel = 0
+Shadow_8.Position = UDim2.new(0.5, 0, 0.5, 0)
+Shadow_8.Size = UDim2.new(1, 2, 1, 2)
+Shadow_8.ZIndex = 3
+Shadow_8.Image = "rbxassetid://3602733521"
+Shadow_8.ImageColor3 = Color3.fromRGB(20, 20, 20)
+Shadow_8.ImageTransparency = 0.600
+
+UICorner_41.CornerRadius = UDim.new(0, 15)
+UICorner_41.Parent = Shadow_8
+
+Indicator_7.Name = "Indicator"
+Indicator_7.Parent = Switch_7
+Indicator_7.AnchorPoint = Vector2.new(0, 0.5)
+Indicator_7.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+Indicator_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Indicator_7.BorderSizePixel = 0
+Indicator_7.Position = UDim2.new(1, -40, 0.5, 0)
+Indicator_7.Size = UDim2.new(0, 17, 0, 17)
+
+UICorner_42.CornerRadius = UDim.new(1, 0)
+UICorner_42.Parent = Indicator_7
+
+Interact_7.Name = "Interact"
+Interact_7.Parent = flytoggle
+Interact_7.AnchorPoint = Vector2.new(0.5, 0.5)
+Interact_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Interact_7.BackgroundTransparency = 1.000
+Interact_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Interact_7.BorderSizePixel = 0
+Interact_7.Position = UDim2.new(0.5, 0, 0.5, 0)
+Interact_7.Size = UDim2.new(1, 0, 1, 0)
+Interact_7.ZIndex = 5
+Interact_7.Font = Enum.Font.SourceSans
+Interact_7.Text = ""
+Interact_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+Interact_7.TextSize = 14.000
+Interact_7.TextTransparency = 1.000
+
+Title_9.Name = "Title"
+Title_9.Parent = flytoggle
+Title_9.AnchorPoint = Vector2.new(1, 0.5)
+Title_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_9.BackgroundTransparency = 1.000
+Title_9.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Title_9.BorderSizePixel = 0
+Title_9.Position = UDim2.new(1, -63, 0.5, 0)
+Title_9.Size = UDim2.new(0, 385, 0, 14)
+Title_9.Font = Enum.Font.GothamMedium
+Title_9.Text = "God fly"
+Title_9.TextColor3 = Color3.fromRGB(240, 240, 240)
+Title_9.TextScaled = true
+Title_9.TextSize = 14.000
+Title_9.TextWrapped = true
+Title_9.TextXAlignment = Enum.TextXAlignment.Left
+
 local Box = Instance.new("BoolValue")
 Box.Name = "Box"
 Box.Parent = m0th
@@ -978,6 +1426,7 @@ Spinner_Vert.Parent = m0th
 
 
 return m0th
+
 
 
 
