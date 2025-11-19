@@ -7,7 +7,10 @@ task.wait(20) -- give UI time to exist
 loadstring(game:HttpGet(repo.."main.lua"))()
 task.wait(4)
 loadstring(game:HttpGet(repo.."box.lua"))()
+loadstring(game:HttpGet(repo.."fly.lua"))()
+loadstring(game:HttpGet(repo.."Spin-vert.lua"))()
+loadstring(game:HttpGet(repo.."Spin-hori.lua"))()
 loadstring(game:HttpGet(repo.."lines.lua"))()
 loadstring(game:HttpGet(repo.."aim.lua"))()
 
-print("m0th v1 loaded – 5-file version")
+print("m0th v1 loaded – 6-file version")
