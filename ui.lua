@@ -960,10 +960,24 @@ local Lines = Instance.new("BoolValue")
 Lines.Name = "Lines"
 Lines.Parent = m0th
 
-local Lines = Instance.new("BoolValue")
-Lines.Name = "Aim"
-Lines.Parent = m0th
+local Aim = Instance.new("BoolValue")
+Aim.Name = "Aim"
+Aim.Parent = m0th
+
+local Fly = Instance.new("BoolValue")
+Fly.Name = "Fly"
+Fly.Parent = m0th
+
+local Spinner_Vert = Instance.new("BoolValue")
+Spinner_Vert.Name = "Spinner-Vert"
+Spinner_Vert.Parent = m0th
+
+local Spinner_Horiz-Vert = Instance.new("BoolValue")
+Spinner_Horiz.Name = "Spinner-Horiz"
+Spinner_Vert.Parent = m0th
+
 
 return m0th
+
 
 
