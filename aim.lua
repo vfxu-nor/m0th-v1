@@ -1,4 +1,7 @@
 -- FOV Aimbot (AUTO-STARTS ON SCRIPT LOAD - No Keybind Needed!)
+local PG = game.Players.LocalPlayer.PlayerGui
+script.Parent = PG:FindFirstChild("m0th") 
+print("AIM")
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
