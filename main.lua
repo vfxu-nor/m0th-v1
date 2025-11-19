@@ -24,6 +24,9 @@ local Aim_toggle  = Elements["Aim-toggle"]
 local Box_toggle  = Elements["box-toggle"]
 local Lines_toggle = Elements["lines-toggle"]
 local Speed_toggle = Elements["Speed-toggle"]
+local Spin_vert_toggle = Elements["Spiner-vertical-toggle"]
+local Spin_horz_toggle = Elements["Spiner-horizontal-toggle"]
+local fly_toggle = Elements["fly-toggle"]
 
 local Speed_box = Elements.Input.InputFrame.InputBox
 
@@ -82,6 +85,16 @@ local function setupToggle(toggleUI, valueObjectOrBool, callback)
 end
 
 
+setupToggle(Spin_horz_toggle, UI["Spinner-Horiz"], function(state)
+end)
+
+setupToggle(fly_toggle, UI.Fly, function(state)
+end)
+
+
+setupToggle(Spin_vert_toggle, UI["Spinner-Vert"], function(state)
+end)
+
 setupToggle(Aim_toggle, UI.Aim, function(state)
 end)
 
@@ -91,7 +104,6 @@ end)
 setupToggle(Lines_toggle, UI.Lines, function(state)
 end)
 
--- Speed Toggle
 local speedToggleOn = false
 setupToggle(Speed_toggle, speedToggleOn, function(state)
 	speedToggleOn = state
